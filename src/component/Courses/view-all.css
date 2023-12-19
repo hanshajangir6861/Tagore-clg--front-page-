@@ -1,0 +1,50 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.courses{
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to right, #5f9cff, #fefa7b);
+  /* Adjust other styles as needed */
+  color: #fff;
+  padding: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.courses h2{
+    text-decoration: underline 2px solid black;
+    color: black;
+    padding-top: 30px;
+    font-weight: bold;
+}
+.all-courses-one {
+    margin-top: 50px;
+}
+.all-courses-two {
+    margin-top: 50px;
+}
+.all-courses-three {
+    margin-top: 50px;
+}
+.all-courses-four {
+    margin-top: 50px;
+}
+
+.all-courses-one img.card-img-top {
+    height: 200px;
+}
+.all-courses-two img.card-img-top {
+    height: 200px;
+}
+.all-courses-three img.card-img-top {
+    height: 200px;
+}
+.all-courses-four img.card-img-top {
+    height: 200px;
+}
