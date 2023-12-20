@@ -14,12 +14,9 @@
 .wapper .bg-body-tertiary
 {
 background-color: white !important;
-/* border: 1px solid gray; */
+
 }
-/* .wapper .container {
-    display: flex;
-    justify-content: center !important;
-} */
+
 .wapper .ms-auto button
 {
     height: 35px;
@@ -29,17 +26,14 @@ background-color: white !important;
     text-align: center;
     color: #fff;
     border: 0;
-    /* padding: 5px; */
+  
     
 }
 .ms-auto  a {
     color: #b71109;
     text-decoration: none;
 }
-/* .wapper .ms-auto button:hover
-{
-    box-shadow: 1px 10px 10px 1px rgb(0, 0, 0);
-} */
+
 
 .wapper .name h3
 {
@@ -57,27 +51,18 @@ background-color: white !important;
     height: auto;
     padding: 20px;
 }
-/* .wapper-sec .me-auto
-{
-    display: flex !important;
-    justify-content: center !important;
-} */
-/* .wapper-sec #basic-navbar-nav
-{
-    display: flex !important;
-    justify-content: center !important;
-} */
+
 .wapper-sec .style {
     border: 2px solid white;
     background-color: white;
 }
-.wapper-sec .container
+/* .wapper-sec .container
 {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important; 
-}
+} */
 .wapper-sec .nav-link {
     height: 40px;
     width: 140px;
@@ -89,10 +74,7 @@ background-color: white !important;
     align-items: center;
     color: black;
 }
-/* .wapper-sec .nav-link:hover
-{
-    box-shadow: 1px 10px 10px 1px black;
-} */
+
 
 /* ............<slider>.................. */
 
@@ -181,13 +163,13 @@ text-decoration: underline 2px solid black;
 /* ................,courses................. */
 
 
-.our-cour .our-cources {
+/* .our-cour .our-cources {
     display: flex !important;
     justify-content: center !important;
     gap: 50px;
     border: 0px;
     flex-wrap: wrap;
-}
+} */
 .our-cour a button
 {
     height: 40px;
@@ -204,10 +186,10 @@ text-decoration: underline 2px solid black;
 .our-cour a
 {
     margin: auto;
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     text-align: center;
-    justify-content: center;
+    /* justify-content: center; */
     text-decoration: none;
     margin-top: 20px;
 }
@@ -236,6 +218,7 @@ text-decoration: underline 2px solid black;
 }
 .course-box .rows.row {
     text-align: -webkit-center;
+    margin-bottom: 30px;
 }
 .course-box .card-img-top {
     height: 200px;
@@ -287,11 +270,11 @@ text-decoration: underline 2px solid black;
 
 }
 .main-footer .cols p {
-    /* padding: 0px 170px; */
+  
     text-align: left;
 }
 .main-footer .cols h2{
-    /* padding: 0px 170px; */
+   
     text-align: left;
     text-decoration: underline 2px solid yellow;
 }

@@ -364,7 +364,7 @@ function Header() {
                 required
                 type="text"
                 placeholder="First name"
-                // defaultValue="Mark"
+                
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -374,25 +374,11 @@ function Header() {
                 required
                 type="text"
                 placeholder="Last name"
-                // defaultValue="Otto"
+               
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
-            {/* <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-              <Form.Label>Username</Form.Label>
-              <InputGroup hasValidation>
-                <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
-                <Form.Control
-                  type="text"
-                  placeholder="Username"
-                  aria-describedby="inputGroupPrepend"
-                  required
-                />
-                <Form.Control.Feedback type="invalid">
-                  Please choose a username.
-                </Form.Control.Feedback>
-              </InputGroup>
-            </Form.Group> */}
+            
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} md="6" controlId="validationCustom03">
@@ -464,7 +450,7 @@ function Header() {
 
         </Col>
         <Col className='cols' lg={4}>
-         <h2>Social media</h2>
+         <h2>Social Media</h2>
          <p> <EmailIcon/>tagore@gmail.com</p>
          <p> <WhatsAppIcon/>Whatsapp</p>
          <p> <FacebookIcon/>Facebook</p>
