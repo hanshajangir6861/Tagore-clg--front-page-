@@ -15,12 +15,9 @@
 .wapper .bg-body-tertiary
 {
 background-color: white !important;
-/* border: 1px solid gray; */
+
 }
-/* .wapper .container {
-    display: flex;
-    justify-content: center !important;
-} */
+
 .wapper .ms-auto button
 {
     height: 35px;
@@ -30,7 +27,7 @@ background-color: white !important;
     text-align: center;
     color: #fff;
     border: 0;
-    /* padding: 5px; */
+  
     
 }
 .ms-auto  a {
@@ -41,10 +38,7 @@ background-color: white !important;
 .ms-auto button a{
     color: white;
 }
-/* .wapper .ms-auto button:hover
-{
-    box-shadow: 1px 10px 10px 1px rgb(0, 0, 0);
-} */
+
 
 .wapper .name h3
 {
@@ -64,6 +58,7 @@ background-color: white !important;
     padding: 20px;
 }
 
+
 /* .wapper-sec .me-auto
 {
     display: flex !important;
@@ -74,17 +69,19 @@ background-color: white !important;
     display: flex !important;
     justify-content: center !important;
 } */
+=======
+
 .wapper-sec .style {
     border: 2px solid white;
     background-color: white;
 }
-.wapper-sec .container
+/* .wapper-sec .container
 {
     /* display: flex !important; */
     /* justify-content: center !important; */
     align-items: center !important;
     text-align: center !important; 
-}
+} */
 .wapper-sec .nav-link {
     height: 40px;
     width: 140px;
@@ -96,6 +93,7 @@ background-color: white !important;
     align-items: center;
     color: black;
 }
+
 .wapper-sec .m-auto a {
     color: black;
     text-decoration: none;
@@ -107,10 +105,212 @@ background-color: white !important;
 
 /* ............<slider>.................. */
 .ms-auto {
+=======
+
+
+/* ............<slider>.................. */
+
+.slider img
+{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(95, 198, 64);
+}
+
+
+      /* ..........About college................ */
+
+
+.about-college
+{
+    height: auto;
+    background-color:#1450a372;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+}
+.about-college h2 {
+    text-align: center;
+     padding: 30px;
+     text-decoration: underline 2px solid black;
+     color: black;
+   
+}
+.college-box .rows.row {
+    text-align: -webkit-center;
+}
+.college-box img.card-img-top {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    margin-top: 10px;
+}
+.about-college .college-box .card{
+    
+    border-radius: 20px !important;
+}
+
+/* ...............<Our-facilities>............... */
+
+
+
+.our-faci
+{
+    height: auto;
+    background-color: #ffc33668;
+    text-align: center;
+    padding: 20px 0;
+}
+.our-faci h2
+{
+    
+text-align: center;
+padding: 30px;
+text-decoration: underline 2px solid black;
+}
+.fac-box-one .rows.row {
+    text-align: -webkit-center;
+}
+.fac-box-one{
+    margin-top:  40px;
+
+}
+.fac-box-two .rows.row {
+    text-align: -webkit-center;
+}
+.fac-box-two{
+    margin: 40px 0;
+}
+.fac-box-one .card-img-top {
+    height: 200px;
+}
+.fac-box-two .card-img-top {
+    height: 200px;
+}
+
+
+
+
+/* ................,courses................. */
+
+
+/* .our-cour .our-cources {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 50px;
+    border: 0px;
+    flex-wrap: wrap;
+} */
+.our-cour a button
+{
+    height: 40px;
+    width: 100px;
+    /* border: 1px solid gray; */
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+.our-cour a
+{
+    margin: auto;
+    /* display: flex; */
+    /* align-items: center; */
+    text-align: center;
+    /* justify-content: center; */
+    text-decoration: none;
+    margin-top: 20px;
+}
+.our-cour h2
+{
+    /* margin: auto; */
+    /* margin: 30px 0xp 20px ;
+     */
+
+    /* display: flex; */
+    align-items: center;
+
+    text-decoration: underline 2px solid black;
+    /* margin-top: 20px; */
+    /* margin: 20px 0px 20px; */
+    padding: 30px;
+
+}
+.our-cour 
+{
+    text-align: center;
+    background-color: rgba(13, 141, 253, 0.447);
+    align-items: center;
+    height: auto;
+    padding: 20px;
+}
+.course-box .rows.row {
+    text-align: -webkit-center;
+    margin-bottom: 30px;
+}
+.course-box .card-img-top {
+    height: 200px;
+}
+
+
+/* ..............Form................. */
+
+
+.form-main{
+    height: auto;
+    width: 100%;
+    
+}
+.form-main .rows{
+    margin: 20px 0;
+
+}
+.form-main form {
+    border: 1px solid gray;
+    padding: 10px;
+    /* height: 00px; */
+}
+.form-main iframe
+{
+    width: 100%;
+    height: 100%;
+}
+.form-main .form-label {
+
     color: black;
     text-decoration: none;
 }
 
 
 
+
+
+=======
+.main-footer
+{
+    height: auto;
+    padding: 20px 0px;
+    width: 100%;
+    background-color: rgb(22 9 71);
+    color: #fff;
+}
+.main-footer .rows
+{
+    text-align: center;
+    color: #fff;
+
+}
+.main-footer .cols p {
+  
+    text-align: left;
+}
+.main-footer .cols h2{
+   
+    text-align: left;
+    text-decoration: underline 2px solid yellow;
+}
 

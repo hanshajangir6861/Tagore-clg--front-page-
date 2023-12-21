@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
 import Header from './component/Header/Header.jsx'
 import Home from './component/Home/Home.jsx'
 import Footer from './component/Footer/Footer.jsx'
@@ -58,4 +57,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Footer />
         </BrowserRouter>
     </>
+
 )
