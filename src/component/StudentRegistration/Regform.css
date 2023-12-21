@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container .hadder{
+    display: flex;
+    justify-content: space-between;
+}
+.hadder img {
+    height: 100px;
+    width: 121px;
+}
+.hadding{
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
+.decription {
+    text-align: end;
+}
+.container{
+    margin-top: 10px;
+}
