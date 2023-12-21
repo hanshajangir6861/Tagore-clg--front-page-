@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './view-all.css'
+import '../Courses/View-all.css'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {Container, Row , Col } from 'react-bootstrap'
@@ -10,6 +10,7 @@ import Bcom from '../Image/bcom.jpg'
 import Ncc from '../Image/ncc-img.jpg'
 import Nss from '../Image/nss-img.jpg'
 import Scout from '../Image/scout-img.jpg'
+import { Link } from 'react-router-dom';
 
  function View() {
   return (
@@ -30,7 +31,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/bca'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -43,7 +44,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/bba'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -56,7 +57,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/bcom'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -76,7 +77,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/ba'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -89,7 +90,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/bsc'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -102,7 +103,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/ma'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -122,7 +123,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/mcom'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -135,29 +136,10 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/msc'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
-                    <Col className='cols'lg={4}>
-                    <Card style={{  }}>
-      <Card.Img variant="top" src={Bba} />
-      <Card.Body>
-        <Card.Title>B.Ed</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Details</Button>
-      </Card.Body>
-    </Card>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-        <div className='all-courses-three'>
-            <Container>
-                <Row className='rows'>
                     <Col className='cols'lg={4}>
                     <Card style={{  }}>
       <Card.Img variant="top" src={Ncc} />
@@ -167,10 +149,23 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/ncc'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
+                   
+                </Row>
+            </Container>
+        </div>
+        <div className='all-courses-three'>
+            <Container>
+                <Row className='rows'>
+                   
+
+<Col className='cols' lg={2}>
+
+</Col>
+
                     <Col className='cols'lg={4}>
                     <Card style={{  }}>
       <Card.Img variant="top" src={Nss} />
@@ -180,7 +175,7 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/nss'>Details</Link></Button>
       </Card.Body>
     </Card>
                     </Col>
@@ -193,9 +188,11 @@ import Scout from '../Image/scout-img.jpg'
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Details</Button>
+        <Button variant="primary"><Link to='/scout'>Details</Link></Button>
       </Card.Body>
     </Card>
+                    </Col>
+                    <Col className='cols' lg={2}>
                     </Col>
                 </Row>
             </Container>
