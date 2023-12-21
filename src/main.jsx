@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 import Header from './component/Header/Header.jsx'
 import Home from './component/Home/Home.jsx'
 import Footer from './component/Footer/Footer.jsx'
@@ -28,7 +28,6 @@ import AdminLogin from './component/AdminLogin/AdminLogin.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
         <BrowserRouter>
-
             <Routes>
                 <Route index element={<Header />} />
                 <Route path='/contactus' element={<ContactUs />} />
@@ -55,14 +54,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path='/adminreg/*' element={<Employregform />} />
                 <Route path='/adminlog/*' element={<Employeelogin />} />
                 <Route path='/AdminLogin/*' element={<AdminLogin/>} />
-
-
-
             </Routes>
             <Footer />
         </BrowserRouter>
     </>
-
-
-
 )
