@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Ncc from '/src/component/Image/Ncc-logo.jpeg'
-import './Ncc.css'
+import '../NCC/Ncc.css'
 function FormExample() {
     const [validated, setValidated] = useState(false);
 

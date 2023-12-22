@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cap from '/src/component/Image/cap.png'
-import './Bcom.css'
+import '../BCOM/Bcom.css'
 function FormExample() {
     const [validated, setValidated] = useState(false);
 
