@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cap from '../image/cap.png'
+import cap from '../Image/cap.png'
 import '../EmployeeRegistration/Employregform.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';

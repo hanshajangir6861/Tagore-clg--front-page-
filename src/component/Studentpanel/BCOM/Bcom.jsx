@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cap from '/src/Component/Image/cap.png'
+import cap from '/src/component/Image/cap.png'
 import './Bcom.css'
 function FormExample() {
     const [validated, setValidated] = useState(false);
