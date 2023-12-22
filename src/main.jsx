@@ -4,7 +4,7 @@ import Header from './component/Header/Header.jsx'
 import Home from './component/Home/Home.jsx'
 import Footer from './component/Footer/Footer.jsx'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-import ContactUs from './component/ContactUs/ContactUs.jsx'
+// import ContactUs from './component/ContactUs/ContactUs.jsx'
 import Mediagallary from './component/MediaGallery/Mediagallary.jsx'
 import Aboutus from './component/Aboutus/Aboutus.jsx'
 import Bca from './component/Studentpanel/BCA/Bca.jsx'
@@ -29,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <BrowserRouter>
             <Routes>
                 <Route index element={<Header />} />
-                <Route path='/contactus' element={<ContactUs />} />
+                
                 <Route path='/mediagallery' element={<Mediagallary />} />
                 <Route path='/about' element={<Aboutus />} />
             </Routes>
