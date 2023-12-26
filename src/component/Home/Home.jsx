@@ -327,6 +327,7 @@ function Home() {
                   Please provide a valid city.
                 </Form.Control.Feedback>
               </Form.Group>
+              
               <Form.Group as={Col} md="6" controlId="validationCustom04">
                 <Form.Label>State</Form.Label>
                 <Form.Control type="text" placeholder="State" required />

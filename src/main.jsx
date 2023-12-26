@@ -4,7 +4,7 @@ import Header from './component/Header/Header.jsx'
 import Home from './component/Home/Home.jsx'
 import Footer from './component/Footer/Footer.jsx'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-// import ContactUs from './component/ContactUs/ContactUs.jsx'
+import ContactUs from './component/ContactUs/ContactUs.jsx'
 import Mediagallary from './component/MediaGallery/Mediagallary.jsx'
 import Aboutus from './component/Aboutus/Aboutus.jsx'
 import Bca from './component/Studentpanel/BCA/Bca.jsx'
@@ -21,7 +21,12 @@ import Scout from './component/Studentpanel/SCOUT/Scout.jsx'
 import View from './component/Courses/View-all.jsx'
 import Employeelogin from './component/EmployeeLogin/Employeelogin.jsx'
 import Employregform from './component/EmployeeRegistration/Employregform.jsx'
-import AdminLogin from './component/AdminLogin/AdminLogin.jsx'
+import AdminPage from './component/AdminPage/AdminPage.jsx'
+import AdminRecord from './component/AdminRecord/AdminRecord.jsx'
+import Studentlogin from './component/StudentLogin/Studentlogin.jsx'
+import Regform from './component/StudentRegistration/Regform.jsx'
+import StudentPage from './component/student-page/StudentPage.jsx'
+import StudentRecord from './component/StudentRecord/StudentRecord.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -29,7 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <BrowserRouter>
             <Routes>
                 <Route index element={<Header />} />
-                
+                <Route path='/contactus' element={<ContactUs/>}/>
                 <Route path='/mediagallery' element={<Mediagallary />} />
                 <Route path='/about' element={<Aboutus />} />
             </Routes>
@@ -52,7 +57,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path='/scout/*' element={<Scout />} />
                 <Route path='/adminreg/*' element={<Employregform />} />
                 <Route path='/adminlog/*' element={<Employeelogin />} />
-                <Route path='/AdminLogin/*' element={<AdminLogin/>} />
+                <Route path='/AdminPage/*' element={<AdminPage/>} />
+                <Route path='/AdminRecord/*' element={<AdminRecord/>} />
+                <Route path='/stdlogin/*' element={<Studentlogin/>} />
+                <Route path='/stdReg/*' element={<Regform/>} />
+                <Route path='/stdPage/*' element={<StudentPage/>} />
+                <Route path='/stdRecord/*' element={<StudentRecord/>} />
+
+
+
+
+
             </Routes>
             <Footer />
         </BrowserRouter>

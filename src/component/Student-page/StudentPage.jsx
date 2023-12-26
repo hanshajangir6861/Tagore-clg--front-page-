@@ -9,38 +9,45 @@ import Logo from '../Image/logo.jpeg'
 // import Tagore from '../Image/Staff.jpg'
 import EmailIcon from '@mui/icons-material/Email';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
-
+import { Link } from 'react-router-dom';
 import React from 'react'
-import '../AdminLogin/AdminLogin.css'
+import '../Student-page/StudentPage.css'
 
- function Admin() {
+ function StudentPage() {
+
+
+
   return (
     <>
-    <div className="wapper">
-        <Navbar expand="lg" className="bg-body-tertiary">
+    <div className='second-navbar'>
+<Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            <Navbar.Brand href="#home"><img src={Logo} alt="" /></Navbar.Brand>
+            
             <div className="name">
               <div className="hin">
-                <h3>टैगोर पी.जी महाविद्यालय,गुढ़ा गोरजी</h3>
+                <h1>Hii!!!</h1>
               </div>
               <div className="eng">
-                <h3>Tagore P.G College,Gudha Gorji</h3>
+                <h3>Name of student</h3>
               </div>
             </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-             <span> <EmailIcon color='dark'/> <a href="">tagore@gmail.com</a> </span>
-                <span> <AddIcCallIcon/> <a href="">0988776665</a></span>
+           <button className='logout'>  <Link to="/"  id="log" onClick={() => { localStorage.clear() }}>Logout</Link></button>
               
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </div>
+</div>
+
+
 
       {/* ...................second-navbar................................ */}
+
+
+
       <div className="wapper-sec">
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
@@ -48,9 +55,11 @@ import '../AdminLogin/AdminLogin.css'
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
-                <Nav.Link href="#home">Admin-Record</Nav.Link>
-                <Nav.Link href="#link">Complain-Corner</Nav.Link>
-                <Nav.Link href="#link">Student-Record</Nav.Link>
+                <Nav.Link href="#home"><Link to='/stdRecord'>Personal-info</Link></Nav.Link>
+                <Nav.Link href="#link">Attendance</Nav.Link>
+                <Nav.Link href="#link">Marks</Nav.Link>
+                <Nav.Link href="#link">Complaint-box</Nav.Link>
+
                 <Nav.Link href="#link">Notice</Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -61,7 +70,7 @@ import '../AdminLogin/AdminLogin.css'
 
       </div>
     </>
-    
+  
   )
 }
-export default Admin;
+export default StudentPage

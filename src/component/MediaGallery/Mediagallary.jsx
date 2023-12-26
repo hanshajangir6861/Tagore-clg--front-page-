@@ -23,7 +23,7 @@ import Col from 'react-bootstrap/Col';
 function ResponsiveExample() {
   return (
     <>
-    <div className="heading">
+    <div className="Mediaheading">
         <h1>Media/Gallery</h1>
         </div>
         <hr />

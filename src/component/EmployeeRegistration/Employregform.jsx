@@ -168,7 +168,9 @@ function FormExample() {
                             feedbackType="invalid"
                         />
                     </Form.Group>
-                    <Button type="submit" onClick={(e)=>{e.preventDefault();
+                    <Button type="submit" 
+                    onClick={(e)=>{
+                 e.preventDefault();
                     AdminRegister()
                     }}>Submit</Button>
                 </div>

@@ -20,13 +20,21 @@ function FormExample() {
 
 
     const AdminLogin = async () => {
-        let result = await axios.post("http://localhost:8000/admindata/AdminLogin", {
+        let result = await axios.post("http://localhost:8000/admindata/AdminsLogin", {
             UserName: userName,
             Password: password
         })
         result = result.data
+
+        if (result.UserName) {
+            alert("Successful login")
+            navigate("/AdminPage")
+          }
+          else {
         console.log(result)
-        navigate("/AdminLogin")
+
+            alert("Please Enter Correct Details")
+          }
     }
 
 
@@ -88,8 +96,8 @@ function FormExample() {
 
 
                             <Form.Group as={Col} md="7" controlId="validationCustom05">
-                                <Form.Label>password</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your Password"
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="Password" placeholder="Enter your Password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required />
@@ -109,7 +117,8 @@ function FormExample() {
                                 feedbackType="invalid"
                             />
                         </Form.Group>
-                        <Button type="submit" onClick={(e) => {
+                        <Button type="submit" 
+                        onClick={(e) => {
                             e.preventDefault();
                             AdminLogin();
                         }}>Submit</Button>
