@@ -48,3 +48,6 @@
 .all-courses-four img.card-img-top {
     height: 200px;
 }
+button.btn.btn-primary {
+    margin: auto;
+}

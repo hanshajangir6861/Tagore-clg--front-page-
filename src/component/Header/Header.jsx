@@ -2,50 +2,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import "./header.css"
+import '../Header/header.css'
 import Bgfirst from '../Image/bg-3.jpg'
 import Logo from '../Image/logo.jpeg'
-import Director from '../Image/director.png'
 import Bgsecond from '../Image/bg-1.jpg'
-import Library from '../Image/library.jpg'
-import Computer from  '../Image/computer-lab.jpg'
-import Faculty from '../Image/best-faculty.jpg'
 import Ncc from '../Image/ncc-img.jpg'
 import Nss from '../Image/nss-img.jpg'
 import Scout from '../Image/scout-img.jpg'
-import Auditorium from'../Image/auditorium.jpg'
-import Staff from '../Image/staff-room.jpg'
-import Class from '../Image/smart-classroom.jpg'
-import Bca from '../Image/bca.jpeg'
-import Bba from '../Image/bba.jpg'
-import Bcom from'../Image/bcom.jpg'
+
 import { useState } from 'react';
-import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import {Container, Row , Col } from 'react-bootstrap'
 import EmailIcon from '@mui/icons-material/Email';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [show, setShow] = useState(false);
-  const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-  };
+ 
 
   return (
     <>
@@ -66,7 +42,7 @@ function Header() {
               <Nav className="ms-auto">
              <span> <EmailIcon color='dark'/> <a href="">tagore@gmail.com</a> </span>
                 <span> <AddIcCallIcon/> <a href="">0988776665</a></span>
-                <button>Login</button>
+                <button><Link to='/adminlog'>Login</Link></button>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -84,10 +60,10 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">About US</Nav.Link>
-                <Nav.Link href="#link">Contact</Nav.Link>
-                <Nav.Link href="#link">Media</Nav.Link>
+                <Nav.Link href="#home"><Link to='/home'>Home</Link></Nav.Link>
+                <Nav.Link href="#link"><Link to='/about'>About</Link> </Nav.Link>
+                <Nav.Link href="#link"><Link to='/contactus'>Contact</Link></Nav.Link>
+                <Nav.Link href="#link"><Link to='/mediagallery'>Media</Link></Nav.Link>
 
 
                 <NavDropdown title="Student panel" id="basic-nav-dropdown">
@@ -99,7 +75,6 @@ function Header() {
                   <NavDropdown.Item href="#action/3.3">M.Sc</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">M.A</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">M.Com</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Bed</NavDropdown.Item>
                   <NavDropdown.Divider />
 
                 </NavDropdown>
@@ -110,43 +85,11 @@ function Header() {
       </div>
 
 
-      {/* ................<slider>................. */}
 
 
-      <div className="slider">
-        <Carousel data-bs-theme="dark">
-          <Carousel.Item>
-            <img
-              className="d-block w-100 "
-              src={Computer}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-             
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 "
-              src={Class}
-              alt="Second slide"
-            />
-            <Carousel.Caption>
-           
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 "
-              src={Library}
-              alt="Third slide"
-            />
-            <Carousel.Caption>
-             
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </div>
+    
+     
+
 
 
       {/* ..........About college................ */}
@@ -470,6 +413,7 @@ function Header() {
       
     </Container>
 </div>
+
     </>
   );
 }

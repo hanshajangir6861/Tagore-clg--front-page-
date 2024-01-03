@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container.hadder{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.hadder img {
+    height: 100px;
+    width: 121px;
+}
+.container{
+    margin-bottom: 20px;
+}
+
+.Adminreg button {
+    border: none;
+    height: 40px;
+    width: 200px;
+    background-color: #4E0FEA;
+    color: white;
+    border-radius: 10px;
+}
+
