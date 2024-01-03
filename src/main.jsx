@@ -1,8 +1,9 @@
 import React from 'react'
+import App from './App'
 import ReactDOM from 'react-dom/client'
 
-// import App from './App.jsx'
-// import './index.css'
+import App from './App.jsx'
+import './index.css'
 // import Header from './component/Header/Header.jsx'
 // import Header from'./Header'
 // import View from './component/Courses/View-all.jsx'
@@ -79,36 +80,9 @@ import AdminLogin from './component/AdminLogin/AdminLogin.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
-        <BrowserRouter>
-            <Routes>
-                <Route index element={<Header />} />
-                <Route path='/contactus' element={<ContactUs />} />
-                <Route path='/mediagallery' element={<Mediagallary />} />
-                <Route path='/about' element={<Aboutus />} />
-            </Routes>
-
-
-            <Routes>
-                <Route index element={<Home />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='/viewall/*' element={<View />} />
-                <Route path='/bca/*' element={<Bca />} />
-                <Route path='/bba/*' element={<Bba />} />
-                <Route path='/ba/*' element={<Ba />} />
-                <Route path='/bcom/*' element={<Bcom />} />
-                <Route path='/bsc/*' element={<Bsc />} />
-                <Route path='/ma/*' element={<Ma />} />
-                <Route path='/mcom/*' element={<Mcom />} />
-                <Route path='/msc/*' element={<Msc />} />
-                <Route path='/ncc/*' element={<Ncc />} />
-                <Route path='/nss/*' element={<Nss />} />
-                <Route path='/scout/*' element={<Scout />} />
-                <Route path='/adminreg/*' element={<Employregform />} />
-                <Route path='/adminlog/*' element={<Employeelogin />} />
-                <Route path='/AdminLogin/*' element={<AdminLogin/>} />
-            </Routes>
-            <Footer />
-        </BrowserRouter>
+     <React.StrictMode>
+       <App/>
+        </React.StrictMode>
     </>
 
 

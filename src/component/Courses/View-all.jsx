@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../Courses/View-all.css'
+import '../Courses/view-all.css'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {Container, Row , Col } from 'react-bootstrap'

@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* .wapper .container {
+    display: flex;
+    justify-content: space-between !important;
+}
+.wapper
+{
+    padding: 10px;
+} */
+
+.container .hadder {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.container .logo img
+{
+    height: 100px;
+    width: 100px;
+}
+
+.bg-body-tertiary img
+{
+    height: 100px;
+    width: 100px;
+}
+
+.student-form h2
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.student-form 
+{
+    margin-top: 20px;
+    padding: 20px;
+}

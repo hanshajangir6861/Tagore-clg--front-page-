@@ -6,13 +6,16 @@ import '../ContactUs/ContactUs.css'
 const ContactUs = () => {
   return (
     <div className='contactback'>
-      <Container className="py-5">
-        <Row>
-          <Col md={6}>
-            <Card className="bg-dark text-white">
-              <Card.Body>
-                <h1>Contact Us</h1> <hr />
+       <h1>Contact Us</h1> <hr />
                 <h2>Tagore P.G College, Gudha Gorji (JJN...)</h2>
+      <Container>
+        <Row className='r'>
+          <Col md={2}>
+
+          </Col>
+          <Col md={8}>
+          
+               
                <div className='Contactbox'>
                <ul>
                 <li>Website: (tagorecollege.com)</li>
@@ -34,9 +37,12 @@ const ContactUs = () => {
 
                </div>
                
-              </Card.Body>
-            </Card>
+             
           </Col>
+          <Col md={2}>
+
+          </Col>
+
         </Row>
       </Container>
     </div>

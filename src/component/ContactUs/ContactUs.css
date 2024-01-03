@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .contactback{
-    height: auto;
+    height: 850px;
     width: 100%;
     background:linear-gradient(rgba(0, 0, 0, 0.637) , rgba(0, 0, 0, 0.61) ,rgba(0, 0, 0, 0.541)), url("../image/Contact.jpg");
    
@@ -15,14 +15,14 @@
 .contactback h1{
     text-align: center;
     color: white;
-  
-    padding: 10px;
+     text-decoration: underline 2px solid white;
+    padding-top: 10px;
 }
 .contactback h2{
     text-align: center;
     color: white;
   
-    padding: 20px;
+    /* padding: 20px; */
     padding-bottom: 50px;
 }
 .Contactbox{

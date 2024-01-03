@@ -72,20 +72,7 @@ function Header() {
                 <Nav.Link href="#link"><Link to='/about'>About</Link> </Nav.Link>
                 <Nav.Link href="#link"><Link to='/contactus'>Contact</Link></Nav.Link>
                 <Nav.Link href="#link"><Link to='/mediagallery'>Media</Link></Nav.Link>
-
-
-                <NavDropdown title="Student panel" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">B.Sc</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">B.A</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">B.Com</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">BCA</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">BBA</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">M.Sc</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">M.A</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">M.Com</NavDropdown.Item>
-                  <NavDropdown.Divider />
-
-                </NavDropdown>
+                <Nav.Link href="#link"> <Link to='/stdlogin'> Student Login</Link></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

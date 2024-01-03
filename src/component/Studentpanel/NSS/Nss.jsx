@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nss from '/src/Component/Image/Nss-logo.jpeg'
+import Nss from '/src/component/Image/Nss-logo.jpeg'
 import '../NSS/Nss.css'
 function FormExample() {
     const [validated, setValidated] = useState(false);
