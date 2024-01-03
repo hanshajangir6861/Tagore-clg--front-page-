@@ -15,6 +15,7 @@ import bca from '../Image/bca.jpeg'
 import Bba from '../Image/bba.jpg'
 import Bcom from '../Image/bcom.jpg'
 import '../Home/Home.css'
+import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -327,6 +328,7 @@ function Home() {
                   Please provide a valid city.
                 </Form.Control.Feedback>
               </Form.Group>
+              
               <Form.Group as={Col} md="6" controlId="validationCustom04">
                 <Form.Label>State</Form.Label>
                 <Form.Control type="text" placeholder="State" required />
@@ -362,6 +364,8 @@ function Home() {
 
     </div>
   </Container>
+
+
     </>
 
   )

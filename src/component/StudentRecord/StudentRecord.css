@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ 
+.std{
+    margin-top: 0.5rem;
+}
+.container .hadder {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.container .logo img
+{
+    height: 100px;
+    width: 100px;
+}
+
+.bg-body-tertiary img
+{
+    height: 100px;
+    width: 100px;
+}
+
+.student-form h2
+{
+    text-align: center;
+}
+.student-form 
+{
+    margin-top: 20px;
+}

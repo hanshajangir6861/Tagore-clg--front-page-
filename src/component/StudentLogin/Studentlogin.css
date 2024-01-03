@@ -17,6 +17,14 @@
 .container{
     margin-bottom: 20px;
 }
+.stdLogin button{
+    border: none;
+    height: 40px;
+    width: 200px;
+    background-color: #4E0FEA;
+    color: white;
+    border-radius: 10px;
+}
 
 
 
