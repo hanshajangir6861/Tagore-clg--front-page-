@@ -29,6 +29,7 @@ import StudentPage from './component/student-page/StudentPage.jsx'
 import StudentRecord from './component/StudentRecord/StudentRecord.jsx'
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
         <BrowserRouter>
@@ -63,6 +64,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path='/stdReg/*' element={<Regform/>} />
                 <Route path='/stdPage/*' element={<StudentPage/>} />
                 <Route path='/stdRecord/*' element={<StudentRecord/>} />
+                
 
 
 
