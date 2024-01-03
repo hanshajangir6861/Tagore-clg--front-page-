@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.semester h1 {
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: underline 2px solid  #337ab7 ;
+    color: #337ab7;
+}
+.table input[type="text"] {
+    width: 150px;
+}
+.table-row th{
+    background-color: #337ab7;
+    color: white;
+}
