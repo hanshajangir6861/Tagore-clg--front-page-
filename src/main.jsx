@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import App from './App.jsx'
-import './index.css'
+// import App from './App.jsx'
+// import './index.css'
 // import Header from './component/Header/Header.jsx'
 // import Header from'./Header'
 // import View from './component/Courses/View-all.jsx'
@@ -12,7 +12,7 @@ import './index.css'
 // import ComplaintBox from './component/Complaint-Box/ComplaintBox.jsx'
 // import MarksTable from './component/Marks-table/marksTable.jsx'
 // import StudentRecord from './component/Student-record/StudentRecord.jsx'
-import Result from './component/Result/Result.jsx'
+// import Result from './component/Result/Result.jsx'
 // import BaResult from './component/Ba-Result/BaResult.jsx'
 // import BscResult from './component/Bsc-Result/BscResult.jsx'
 // import BcomResult from './component/Bcom-Result/BcomResult.jsx'
@@ -28,7 +28,7 @@ import Result from './component/Result/Result.jsx'
 
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// ReactDOM.createRoot(document.getElementById('root')).render(
   
     // <Header/> 
     // <View/>
@@ -38,7 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     // <ComplaintBox/>
     // <MarksTable/>
     // <StudentRecord/>
-    <Result/>
+    // <Result/>
     // <BaResult/>
     // <BscResult/>
     // <BcomResult/>
@@ -48,7 +48,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     // <MaResult/>
     // <McomResult/>
     // <MscResult/>
-)
+// )
 
 
 

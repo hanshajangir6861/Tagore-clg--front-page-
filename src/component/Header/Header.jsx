@@ -9,6 +9,14 @@ import Bgsecond from '../Image/bg-1.jpg'
 import Ncc from '../Image/ncc-img.jpg'
 import Nss from '../Image/nss-img.jpg'
 import Scout from '../Image/scout-img.jpg'
+// import Card from '.react-bootstrap' 
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Director from '../Image/director.png'
+// import Director from '../Image/director.png'
+import Library from '../Image/library.jpg'
+
+
 
 import { useState } from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
