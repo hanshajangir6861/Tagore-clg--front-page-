@@ -56,13 +56,7 @@ background-color: white !important;
     border: 2px solid white;
     background-color: white;
 }
-/* .wapper-sec .container
-{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important; 
-} */
+
 .wapper-sec .nav-link {
     height: 40px;
     width: 140px;

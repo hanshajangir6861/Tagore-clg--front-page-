@@ -157,7 +157,7 @@ function Header() {
         <div className='college-box'>
 <Container>
   <Row className='rows'>
-    <Col className='cols' lg={6}>
+    <Col className='cols' lg={6} >
     <Card style={{  }}>
               <Card.Img variant="top" src={Director} />
               <Card.Body>
@@ -356,6 +356,8 @@ function Header() {
       <div className="form-main">
 <Row className='rows' mt-5 mb-5>
   <Col className='cols' lg={6} >
+
+
   <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} md="6" controlId="validationCustom01">
@@ -388,6 +390,8 @@ function Header() {
                 Please provide a valid city.
               </Form.Control.Feedback>
             </Form.Group>
+
+            
             <Form.Group as={Col} md="6" controlId="validationCustom04">
               <Form.Label>State</Form.Label>
               <Form.Control type="text" placeholder="State" required />
@@ -408,6 +412,8 @@ function Header() {
           <Button type="submit">Submit form</Button>
         </Form>
   </Col>
+
+  
   <Col className='cols' lg={6}>
   <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.528965756721!2d75.5213261752605!3d27.88573637608087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396ccd5bd01662eb%3A0x43d184498d282d59!2sTagore%20College%20Campus!5e0!3m2!1sen!2sin!4v1702703900588!5m2!1sen!2sin"

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ma-box{
+    height: 100vh;
+    width: 100%;
+     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../Image/degree.webp') ;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.ma{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+.ma-boxes .col-lg-3 {
+    height: 200px;
+    border: 2px solid white;
+    margin: auto;
+    border-radius: 20px;
+    padding: 40px 0px;
+
+}
+.ma-boxes{
+    text-align: center;
+    color: white;
+    /* padding: 20px 0; */
+    margin: 20px;
+}
+.ma-boxes svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+.ma-boxes.row {
+    margin-top: 100px;
+}
+.ma-boxes .col-lg-3:hover{
+    background-color: rgba(3, 3, 41, 0.873);
+    border: 0;
+}
+
