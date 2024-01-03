@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -10,15 +10,18 @@ import '../StudentLogin/Studentlogin.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { context } from '../../App';
+
 
 function FormExample() {
+    const serverLink = useContext(context)
     const navigater = useNavigate()
     const [validated, setValidated] = useState(false);
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
 
     const StudentLogin = async () => {
-        let result = await axios.post("http://localhost:8000/data/login", {
+        let result = await axios.post(`${serverLink}/data/login`, {
             Username: username,
             Password: password,
         })

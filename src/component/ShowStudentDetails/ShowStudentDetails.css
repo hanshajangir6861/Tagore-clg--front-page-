@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+label.stdshow.form-label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.images{
+    height: 100%;
+    width: 100%;
+}
+.images img{
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}

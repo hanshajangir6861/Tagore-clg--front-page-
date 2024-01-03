@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -10,9 +10,12 @@ import '../EmployeeLogin/Employeelogin.css'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { context } from '../../App';
+
 
 
 function FormExample() {
+    const serverLink = useContext(context)
     const navigate = useNavigate();
     const [validated, setValidated] = useState(false);
     const [userName, setUsername] = useState()
@@ -20,7 +23,7 @@ function FormExample() {
 
 
     const AdminLogin = async () => {
-        let result = await axios.post("http://localhost:8000/admindata/AdminsLogin", {
+        let result = await axios.post(`${serverLink}/admindata/AdminsLogin`, {
             UserName: userName,
             Password: password
         })
@@ -29,12 +32,12 @@ function FormExample() {
         if (result.UserName) {
             alert("Successful login")
             navigate("/AdminPage")
-          }
-          else {
-        console.log(result)
+        }
+        else {
+            console.log(result)
 
             alert("Please Enter Correct Details")
-          }
+        }
     }
 
 
@@ -79,7 +82,7 @@ function FormExample() {
 
 
 
-                            <Form.Group as={Col} md="7" controlId="validation">
+                            <Form.Group as={Col} md="7" controlId="validationCustom01">
                                 <Form.Label>UserName </Form.Label>
                                 <Form.Control
                                     required
@@ -95,14 +98,14 @@ function FormExample() {
 
 
 
-                            <Form.Group as={Col} md="7" controlId="validationCustom05">
+                            <Form.Group as={Col} md="7" controlId="validationCustom02">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type="Password" placeholder="Enter your Password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required />
                                 <Form.Control.Feedback type="invalid">
-
+                                    Please provide a vaild password
                                 </Form.Control.Feedback>
                             </Form.Group>
 
@@ -117,11 +120,11 @@ function FormExample() {
                                 feedbackType="invalid"
                             />
                         </Form.Group>
-                        <Button type="submit" 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            AdminLogin();
-                        }}>Submit</Button>
+                        <Button type="submit"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                AdminLogin();
+                            }}>Submit</Button>
                     </div>
                 </Form>
             </div >
