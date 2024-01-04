@@ -60,36 +60,36 @@ function StudentRecord() {
         formData.append("PinCode", PinCode);
 
 
-        let result = await axios.post(`${serverLink}/StdRecord/StudentRecordadd`, formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
-        result = result.data
-        console.log(result)
-        if (result) {
-            alert("Your Data has been added")
-            setFirstname('')
-            setLastname('')
-            setFathername('')
-            setMothername('')
-            setEmail('')
-            setDob('')
-            setPhone('')
-            setParentNo('')
-            setPhoto('')
-            setRegistrationDate('')
-            setLocalAddress('')
-            setPermanentAddress('')
-            setIdproof('')
-            setCourse('')
-            setGender('')
-            setState('')
-            setPinCode('')
-            setCity('')
+    let result = await axios.post("http://localhost:8000/StdRecord/StudentRecordadd", formData,{
+        headers:{
+            'Content-Type' : 'multipart/form-data'
         }
-
+    })
+    result = result.data
+    console.log(result)
+    if (result) {
+        alert("Your Data has been added")
+        setFirstname('')
+        setLastname('')
+        setFathername('')
+        setMothername('')
+        setEmail('')
+        setDob('')
+        setPhone('')
+        setParentNo('')
+        setPhoto('')
+        setRegistrationDate('')
+        setLocalAddress('')
+        setPermanentAddress('')
+        setIdproof('')
+        setCourse('')
+        setGender('')
+        setState('')
+        setPinCode('')
+        setCity('')
     }
+    
+}
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;

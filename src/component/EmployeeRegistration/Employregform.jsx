@@ -41,13 +41,9 @@ function FormExample() {
             Password: password
 
         })
+
         result = result.data
-        if (!firstName || !lastName || !userName || !fathersName || !phoneNo || !email || !password) {
-            alert('Please fill  all the fields');
-            return;
-        }
-       else{
-        alert('Successfull Registration')
+        console.log(result)
         navigate("/adminlog")
        }
         
@@ -153,19 +149,43 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group as={Col} md="3" controlId="validationCustom07">
+                        <Form.Group as={Col} md="3" controlId="validationCustom05">
                             <Form.Label className='emploreg'>Password</Form.Label>
                             <Form.Control type="password" placeholder="Enter your Password" required  value={password}
                                 onChange={(e) => setPassword(e.target.value)} />
                             <Form.Control.Feedback type="invalid">
-                                {/* Please provide a valid zip. */}
-                            </Form.Control.Feedback>
-                        </Form.Group>
+                                {Please provide a valid zip.}
+                            {</Form.Control.Feedback> }
+                        {/* </Form.Group> */}
 
+
+
+                           <Form.Group as={Col} md="3" controlId="validationCustom05">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="Password" placeholder="Enter your Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required />
+                                <Form.Control.Feedback type="invalid">
+
+                                </Form.Control.Feedback>
+                            </Form.Group>
 
 
                     </Row>
-                    <Form.Group className="mb-3">
+                    {/* {<Form.Group className="mb-3"> }
+              <Form.Check
+                required
+                label="Agree to terms and conditions"
+                feedback="You must agree before submitting."
+                feedbackType="invalid"
+              />
+            </Form.Group>
+             <Button type="submit">Submit</Button> */}
+
+
+
+                     <Form.Group className="mb-3">
                         <Form.Check
                             required
                             label="Agree to terms and conditions"

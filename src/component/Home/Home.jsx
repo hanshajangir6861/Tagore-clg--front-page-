@@ -227,7 +227,7 @@ useEffect(()=>{
   </div>
 
 
-  {/* ................,courses................. */ }
+  {/* ................courses................. */ }
 
   <div className="our-cour">
     <h2>OUR-COURSES </h2>
@@ -310,21 +310,7 @@ useEffect(()=>{
                 />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </Form.Group>
-              {/* <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-        <Form.Label>Username</Form.Label>
-        <InputGroup hasValidation>
-          <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
-          <Form.Control
-            type="text"
-            placeholder="Username"
-            aria-describedby="inputGroupPrepend"
-            required
-          />
-          <Form.Control.Feedback type="invalid">
-            Please choose a username.
-          </Form.Control.Feedback>
-        </InputGroup>
-      </Form.Group> */}
+             
             </Row>
             <Row className="mb-3">
               <Form.Group as={Col} md="6" controlId="validationCustom03">
@@ -358,6 +344,7 @@ useEffect(()=>{
         <Col className='cols' lg={6}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.528965756721!2d75.5213261752605!3d27.88573637608087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396ccd5bd01662eb%3A0x43d184498d282d59!2sTagore%20College%20Campus!5e0!3m2!1sen!2sin!4v1702703900588!5m2!1sen!2sin"
+      
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"

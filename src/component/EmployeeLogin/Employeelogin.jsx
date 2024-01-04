@@ -109,11 +109,11 @@ function FormExample() {
                                 feedbackType="invalid"
                             />
                         </Form.Group>
-                        <Button type="submit"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                AdminLogin();
-                            }}>Submit</Button>
+                        <Button type="submit" 
+                        onClick={(e) => {
+                            e.preventDefault();
+                            AdminLogin();
+                        }}>Submit</Button>
                     </div>
                 </Form>
             </div >

@@ -72,7 +72,7 @@ function AdminRecord() {
             }
         })
         result = result.data
-        console.log(result)                                                                                                         
+        console.log(result)
         if (result) {
             alert("Your Data has been added")
            

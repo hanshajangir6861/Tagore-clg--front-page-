@@ -101,4 +101,4 @@ const serverLink = import.meta.env.VITE_REACT_APP_SERVER_URL;
   )
 }
 
-export default App
+export default App;
