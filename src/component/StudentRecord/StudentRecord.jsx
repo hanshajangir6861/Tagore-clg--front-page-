@@ -104,18 +104,6 @@ function StudentRecord() {
 
     return (
         <>
-            <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={Student} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-                        <h6>Gudha Gorji, jhunujhunu, rajasthan</h6>
-
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
-            </div>
             <div className="student-form">
                 <h2>STUDENT FORM</h2>
                 <Container>

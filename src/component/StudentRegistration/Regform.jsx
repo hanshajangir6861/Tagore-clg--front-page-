@@ -57,16 +57,7 @@ function FormExample() {
         <>
 
             <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={cap} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-
-                        <h6>TagoreCollege@gmail.com</h6>
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
+                
                 <div className="hadding">
                     <h1>COLLEGE REGISTRATION FORM</h1>
                     <h6>Enter your registration information below</h6>

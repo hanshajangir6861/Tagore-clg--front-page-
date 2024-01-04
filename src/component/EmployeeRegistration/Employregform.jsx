@@ -24,6 +24,7 @@ function FormExample() {
     const [phoneNo, setPhoneNo] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [emailCheck , setemailCheck] = useState('')
 
 
 
@@ -51,8 +52,13 @@ function FormExample() {
     
         
       
+
+        console.log(result)
+        navigate("/adminlog")
+        
     }
 
+    
 
 
     const handleSubmit = (event) => {
@@ -69,16 +75,7 @@ function FormExample() {
         <>
 
             <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={cap} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-
-                        <h6>TagoreCollege@gmail.com</h6>
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
+               
                 <div className="hadding">
                     <h1>EMPLOYEE REGISTRATION FORM</h1>
                     <h6>Enter your registration information below</h6>

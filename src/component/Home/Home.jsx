@@ -15,14 +15,20 @@ import bca from '../Image/bca.jpeg'
 import Bba from '../Image/bba.jpg'
 import Bcom from '../Image/bcom.jpg'
 import '../Home/Home.css'
-import EmailIcon from '@mui/icons-material/Email';
+// import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 function Home() {
   const [validated, setValidated] = useState(false);
+useEffect(()=>{
+  AOS.init({duration:2000});
 
+})
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -78,12 +84,12 @@ function Home() {
   {/* {..........About college................  } */}
 
 
-  <div className="about-college">
+  <div className="about-college" >
     <h2>ABOUT-COLLEGE</h2>
     <div className='college-box'>
       <Container>
         <Row className='rows'>
-          <Col className='cols' lg={6}>
+          <Col className='cols' lg={6} data-aos="zoom-in">
             <Card style={{}}>
               <Card.Img variant="top" src={Director} />
               <Card.Body>
@@ -96,7 +102,7 @@ function Home() {
               </Card.Body>
             </Card>
           </Col>
-          <Col className='cols' lg={6}>
+          <Col className='cols' lg={6} data-aos="zoom-in">
             <Card style={{}}>
               <Card.Img variant="top" src={Director} />
               <Card.Body>
@@ -126,10 +132,10 @@ function Home() {
 
     <div className='fac-box-one'>
       <Container>
-        <Row className='rows'>
+        <Row className='rows' >
           <Col className='cols' lg={4}>
-            <Card style={{}}>
-              <Card.Img variant="top" src={Library} />
+            <Card style={{}} data-aos="zoom-in-down">
+              <Card.Img variant="top" src={Library}  />
               <Card.Body>
                 <Card.Title>Library</Card.Title>
                 <Card.Text>
@@ -141,8 +147,8 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
-              <Card.Img variant="top" src={Computer} />
+            <Card style={{}} data-aos="zoom-in-down">
+              <Card.Img variant="top" src={Computer}  />
               <Card.Body>
                 <Card.Title>Computer lab</Card.Title>
                 <Card.Text>
@@ -154,7 +160,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down">
               <Card.Img variant="top" src={Class} />
               <Card.Body>
                 <Card.Title> Smart-Classrooms</Card.Title>
@@ -174,7 +180,7 @@ function Home() {
       <Container>
         <Row className='rows'>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down" >
               <Card.Img variant="top" src={Staff} />
               <Card.Body>
                 <Card.Title>Staff-Room</Card.Title>
@@ -187,7 +193,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down">
               <Card.Img variant="top" src={Faculty} />
               <Card.Body>
                 <Card.Title>Best-Faculty</Card.Title>
@@ -200,7 +206,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down">
               <Card.Img variant="top" src={Auditorium} />
               <Card.Body>
                 <Card.Title>Auditorium</Card.Title>
@@ -229,7 +235,7 @@ function Home() {
       <Container>
         <Row className='rows'>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-right">
               <Card.Img variant="top" src={bca} />
               <Card.Body>
                 <Card.Title>BCA</Card.Title>
@@ -242,7 +248,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-right">
               <Card.Img variant="top" src={Bba} />
               <Card.Body>
                 <Card.Title>BBA</Card.Title>
@@ -255,7 +261,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-right">
               <Card.Img variant="top" src={Bcom} />
               <Card.Body>
                 <Card.Title>B.Com</Card.Title>
