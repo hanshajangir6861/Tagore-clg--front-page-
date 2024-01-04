@@ -65,8 +65,15 @@ function StudentRecord() {
             'Content-Type' : 'multipart/form-data'
         }
     })
-    result = result.data
-    console.log(result)
+   
+    if(!Firstname ||!Lastname || !Dob || !Fathername ||!Phone || !Email || !Mothername || !ParentNo ||!Course ||!Photo ||!Idproof ||!RegistrationDate ||!Gender  ||!LocalAddress ||!PermanentAddress ||!City || !State ||!PinCode ){
+        alert("Please fill in all the fields")
+        return;
+    }
+    else{
+        alert("Your data has been added")
+        
+    }
     if (result) {
         alert("Your Data has been added")
         setFirstname('')

@@ -16,14 +16,14 @@ function FormExample() {
     const serverLink = useContext(context)
     const navigate = useNavigate();
     const [validated, setValidated] = useState(false);
-    const [firstName, setFirstname] = useState();
-    const [lastName, setLastname] = useState();
-    const [userName, setUsername] = useState();
-    const [fathersName, setFathername] = useState();
-    const [mothersName, setMothername] = useState();
-    const [phoneNo, setPhoneNo] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [firstName, setFirstname] = useState('');
+    const [lastName, setLastname] = useState('');
+    const [userName, setUsername] = useState('');
+    const [fathersName, setFathername] = useState('');
+    const [mothersName, setMothername] = useState('');
+    const [phoneNo, setPhoneNo] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [emailCheck , setemailCheck] = useState('')
 
 
@@ -41,11 +41,16 @@ function FormExample() {
             Password: password
 
         })
-
         result = result.data
-        console.log(result)
-        navigate("/adminlog")
-       }
+        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
+            alert("please fill in all the fields")
+            return;
+        }
+        else{
+            alert("Successfull Registration")
+            navigate("/adminlog")
+        }
+       
         
     }
 
@@ -149,18 +154,9 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group as={Col} md="3" controlId="validationCustom05">
-                            <Form.Label className='emploreg'>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Enter your Password" required  value={password}
-                                onChange={(e) => setPassword(e.target.value)} />
-                            <Form.Control.Feedback type="invalid">
-                                {Please provide a valid zip.}
-                            {</Form.Control.Feedback> }
-                        {/* </Form.Group> */}
+                    
 
-
-
-                           <Form.Group as={Col} md="3" controlId="validationCustom05">
+                           <Form.Group as={Col} md="3" controlId="validationCustom07">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type="Password" placeholder="Enter your Password"
                                     value={password}
@@ -173,15 +169,7 @@ function FormExample() {
 
 
                     </Row>
-                    {/* {<Form.Group className="mb-3"> }
-              <Form.Check
-                required
-                label="Agree to terms and conditions"
-                feedback="You must agree before submitting."
-                feedbackType="invalid"
-              />
-            </Form.Group>
-             <Button type="submit">Submit</Button> */}
+           
 
 
 
@@ -208,7 +196,6 @@ function FormExample() {
                 </div>
             </Form>
         </>
-    );
-}
+    )}
 
 export default FormExample;

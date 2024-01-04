@@ -39,8 +39,14 @@ function FormExample() {
 
         })
         result = result.data
-        console.log(result)
-        navigate("/")
+        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
+            alert("please fill in all the fields")
+            return;
+        }
+        else{
+            alert("Successfull Registration")
+            navigate("/adminlog")
+        }
     }
 
     const handleSubmit = (event) => {
