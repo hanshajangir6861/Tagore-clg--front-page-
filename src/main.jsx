@@ -77,11 +77,55 @@ import Employregform from './component/EmployeeRegistration/Employregform.jsx'
 import AdminLogin from './component/AdminLogin/AdminLogin.jsx'
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<Header />} />
+                <Route path='/contactus' element={<ContactUs/>}/>
+                <Route path='/mediagallery' element={<Mediagallary />} />
+                <Route path='/about' element={<Aboutus />} />
+            </Routes>
+
+
+            <Routes>
+                <Route index element={<Home />} />
+                <Route path='/home' element={<Home />} />
+                <Route path='/viewall/*' element={<View />} />
+                <Route path='/bca/*' element={<Bca />} />
+                <Route path='/bba/*' element={<Bba />} />
+                <Route path='/ba/*' element={<Ba />} />
+                <Route path='/bcom/*' element={<Bcom />} />
+                <Route path='/bsc/*' element={<Bsc />} />
+                <Route path='/ma/*' element={<Ma />} />
+                <Route path='/mcom/*' element={<Mcom />} />
+                <Route path='/msc/*' element={<Msc />} />
+                <Route path='/ncc/*' element={<Ncc />} />
+                <Route path='/nss/*' element={<Nss />} />
+                <Route path='/scout/*' element={<Scout />} />
+                <Route path='/adminreg/*' element={<Employregform />} />
+                <Route path='/adminlog/*' element={<Employeelogin />} />
+                <Route path='/AdminPage/*' element={<AdminPage/>} />
+                <Route path='/AdminRecord/*' element={<AdminRecord/>} />
+                <Route path='/stdlogin/*' element={<Studentlogin/>} />
+                <Route path='/stdReg/*' element={<Regform/>} />
+                <Route path='/stdPage/*' element={<StudentPage/>} />
+                <Route path='/stdRecord/*' element={<StudentRecord/>} />
+                
+
+
+
+
+
+            </Routes>
+            <Footer />
+        </BrowserRouter>
+
      <React.StrictMode>
        <App/>
         </React.StrictMode>
+
     </>
 
 

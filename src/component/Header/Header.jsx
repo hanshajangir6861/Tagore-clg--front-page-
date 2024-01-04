@@ -40,15 +40,14 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-             <span> <EmailIcon color='dark'/> <a href="">tagore@gmail.com</a> </span>
-                <span> <AddIcCallIcon/> <a href="">0988776665</a></span>
+             <span> <EmailIcon color='dark'/><a href="mailto:tagorecollege@gmail.com">tagorecollege@gmail.com</a></span>
+                <span> <AddIcCallIcon/> <a href="">+91-1234567890</a></span>
                 <button><Link to='/adminlog'>Login</Link></button>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
       </div>
-
 
       {/* ...............< Second-navbar >.................. */}
 
@@ -60,7 +59,7 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
-                <Nav.Link href="#home"><Link to='/home'>Home</Link></Nav.Link>
+                <Nav.Link href="#link"><Link to='/home'>Home</Link></Nav.Link>
                 <Nav.Link href="#link"><Link to='/about'>About</Link> </Nav.Link>
                 <Nav.Link href="#link"><Link to='/contactus'>Contact</Link></Nav.Link>
                 <Nav.Link href="#link"><Link to='/mediagallery'>Media</Link></Nav.Link>
@@ -406,3 +405,5 @@ function Header() {
 }
 
 export default Header;
+
+
