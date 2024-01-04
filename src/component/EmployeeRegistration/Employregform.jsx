@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -9,8 +9,11 @@ import cap from '../Image/cap.png'
 import '../EmployeeRegistration/Employregform.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { context } from '../../App';
+
 
 function FormExample() {
+    const serverLink = useContext(context)
     const navigate = useNavigate();
     const [validated, setValidated] = useState(false);
     const [firstName, setFirstname] = useState();
@@ -25,7 +28,7 @@ function FormExample() {
 
 
     const AdminRegister = async () => {
-        let result = await axios.post("http://localhost:8000/admindata/Register", {
+        let result = await axios.post(`${serverLink}/admindata/Register`, {
             FirstName: firstName,
             LastName: lastName,
             UserName: userName,
@@ -88,7 +91,7 @@ function FormExample() {
                 <div className="container">
                     <Row className=" mb-3">
                         <Form.Group as={Col} md="4" controlId="validationCustom01">
-                            <Form.Label>First name</Form.Label>
+                            <Form.Label className='emploreg'>First name</Form.Label>
                             <Form.Control
                                 required
                                 type="text"
@@ -99,7 +102,7 @@ function FormExample() {
 
                         </Form.Group>
                         <Form.Group as={Col} md="4" controlId="validationCustom02">
-                            <Form.Label>Last name</Form.Label>
+                            <Form.Label className='emploreg'>Last name</Form.Label>
                             <Form.Control
                                 required
                                 type="text"
@@ -112,7 +115,7 @@ function FormExample() {
 
 
                         <Form.Group as={Col} md="4" controlId="validation">
-                            <Form.Label>UserName </Form.Label>
+                            <Form.Label className='emploreg'>UserName </Form.Label>
                             <Form.Control
                                 required
                                 type="text"
@@ -124,8 +127,8 @@ function FormExample() {
 
                     </Row>
                     <Row className="mb-3">
-                        <Form.Group as={Col} md="6" controlId="validationCustom03">
-                            <Form.Label>Fathers Name</Form.Label>
+                        <Form.Group as={Col} md="3" controlId="validationCustom03">
+                            <Form.Label className='emploreg'>Fathers Name</Form.Label>
                             <Form.Control type="text" placeholder="Enter your Fathers name"  value={fathersName}
                                 onChange={(e) => setFathername(e.target.value)} required />
                             <Form.Control.Feedback type="invalid">
@@ -133,7 +136,7 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group as={Col} md="3" controlId="validationCustom04">
-                            <Form.Label>Mothers Name</Form.Label>
+                            <Form.Label className='emploreg'>Mothers Name</Form.Label>
                             <Form.Control type="text" placeholder="Enter your mothers name"  value={mothersName}
                                 onChange={(e) => setMothername(e.target.value)} required />
                             <Form.Control.Feedback type="invalid">
@@ -141,7 +144,7 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group as={Col} md="3" controlId="validationCustom05">
-                            <Form.Label>Phoneno.</Form.Label>
+                            <Form.Label className='emploreg'>Phoneno.</Form.Label>
                             <Form.Control type="text" placeholder="Enter your phone no."  value={phoneNo}
                                 onChange={(e) => setPhoneNo(e.target.value)} required />
                             <Form.Control.Feedback type="invalid">
@@ -150,15 +153,15 @@ function FormExample() {
                         </Form.Group>
 
                         <Form.Group as={Col} md="3" controlId="validationCustom05">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="text" placeholder="Enter your Email"  value={email}
-                                onChange={(e) => setEmail(e.target.value)} required />
+                            <Form.Label className='emploreg'>Email</Form.Label>
+                            <Form.Control type="text" placeholder="Enter your Email"  required value={email}
+                                onChange={(e) => setEmail(e.target.value)} />
                             <Form.Control.Feedback type="invalid">
                                 {/* Please provide a valid zip. */}
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        {/* <Form.Group as={Col} md="3" controlId="validationCustom05">
+                        <Form.Group as={Col} md="3" controlId="validationCustom05">
                             <Form.Label>password</Form.Label>
                             <Form.Control type="text" placeholder="Enter your Password"  value={password}
                                 onChange={(e) => setPassword(e.target.value)} required />

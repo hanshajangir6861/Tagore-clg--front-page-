@@ -58,7 +58,7 @@ import '../Student-page/StudentPage.css'
                 <Nav.Link href="#home"><Link to='/stdRecord'>Personal-info</Link></Nav.Link>
                 <Nav.Link href="#link">Attendance</Nav.Link>
                 <Nav.Link href="#link">Marks</Nav.Link>
-                <Nav.Link href="#link">Complaint-box</Nav.Link>
+                <Nav.Link href="#link"><Link to='/ComBox'>Complaint-box</Link></Nav.Link>
 
                 <Nav.Link href="#link">Notice</Nav.Link>
               </Nav>

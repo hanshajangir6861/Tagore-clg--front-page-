@@ -6,15 +6,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Student from '../Image/cap.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import axios from 'axios';
+import { context } from '../../App';
+
 
 function StudentRecord() {
+    const serverLink = useContext(context)
     const [Firstname, setFirstname] = useState()
     const [Lastname, setLastname] = useState()
     const [Dob, setDob] = useState()
@@ -35,26 +38,26 @@ function StudentRecord() {
     const [PinCode, setPinCode] = useState()
     const [validated, setValidated] = useState(false);
 
-const StudentDetails = async() =>{
-    const formData = new FormData();
-    formData.append("Firstname", Firstname);
-    formData.append("Lastname", Lastname);
-    formData.append("Dob", Dob);
-    formData.append("Phone", Phone);
-    formData.append("ParentNo", ParentNo);
-    formData.append("Fathername",Fathername);
-    formData.append("Mothername", Mothername);
-    formData.append("Email",Email );
-    formData.append("Course", Course);
-    formData.append("Photo", Photo);
-    formData.append("Idproof", Idproof);
-    formData.append("Gender", Gender);
-    formData.append("LocalAddress", LocalAddress);
-    formData.append("PermanentAddress", PermanentAddress);
-    formData.append("RegistrationDate", RegistrationDate);
-    formData.append("City", City);
-    formData.append("State", State);
-    formData.append("PinCode", PinCode);
+    const StudentDetails = async () => {
+        const formData = new FormData();
+        formData.append("Firstname", Firstname);
+        formData.append("Lastname", Lastname);
+        formData.append("Dob", Dob);
+        formData.append("Phone", Phone);
+        formData.append("ParentNo", ParentNo);
+        formData.append("Fathername", Fathername);
+        formData.append("Mothername", Mothername);
+        formData.append("Email", Email);
+        formData.append("Course", Course);
+        formData.append("Photo", Photo);
+        formData.append("Idproof", Idproof);
+        formData.append("Gender", Gender);
+        formData.append("LocalAddress", LocalAddress);
+        formData.append("PermanentAddress", PermanentAddress);
+        formData.append("RegistrationDate", RegistrationDate);
+        formData.append("City", City);
+        formData.append("State", State);
+        formData.append("PinCode", PinCode);
 
 
     let result = await axios.post("http://localhost:8000/StdRecord/StudentRecordadd", formData,{
@@ -63,16 +66,7 @@ const StudentDetails = async() =>{
         }
     })
     result = result.data
-    if(!Firstname ||!Lastname || !Dob || !Fathername ||!Phone || !Email || !Mothername || !ParentNo ||!Course ||!Photo ||!Idproof ||!Gender  ||!LocalAddress ||!PermanentAddress ||!City || !State ||!PinCode ||!RegistrationDate){
-        alert("Please fill in all the fields")
-        return;
-    }
-    else{
-        alert("Your data has been added")
-        
-    }
-
-
+    console.log(result)
     if (result) {
         alert("Your Data has been added")
         setFirstname('')
@@ -135,7 +129,7 @@ const StudentDetails = async() =>{
                                     type="text"
                                     placeholder="First name"
                                     value={Firstname}
-                                    onChange={(e)=>setFirstname(e.target.value)}
+                                    onChange={(e) => setFirstname(e.target.value)}
                                 // defaultValue="Mark"
                                 />
                                 {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
@@ -147,64 +141,64 @@ const StudentDetails = async() =>{
                                     type="text"
                                     placeholder="Last name"
                                     value={Lastname}
-                                    onChange={(e)=>setLastname(e.target.value)}
-                                    />
+                                    onChange={(e) => setLastname(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group as={Col} md="4" controlId="validationCustom02">
                                 <Form.Label className='std'>D.O.B :</Form.Label>
                                 <Form.Control
                                     required
                                     type="date"
-                                    placeholder="Date of Birth" 
+                                    placeholder="Date of Birth"
                                     value={Dob}
-                                    onChange={(e)=>setDob(e.target.value)}
-                                    />
+                                    onChange={(e) => setDob(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group as={Col} md="4" controlId="validationCustom02">
                                 <Form.Label className='std'>Father's name :</Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
-                                    placeholder="Father's name" 
+                                    placeholder="Father's name"
                                     value={Fathername}
-                                    onChange={(e)=>setFathername(e.target.value)}
-                                    />
+                                    onChange={(e) => setFathername(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group as={Col} md="4" controlId="validationCustom02">
                                 <Form.Label className='std'>Mother's name :</Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
-                                    placeholder="Mother's name" 
+                                    placeholder="Mother's name"
                                     value={Mothername}
-                                    onChange={(e)=>setMothername(e.target.value)}
-                                    />
+                                    onChange={(e) => setMothername(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group as={Col} md="4" controlId="validationCustom02">
                                 <Form.Label className='std'>Phone No.</Form.Label>
                                 <Form.Control
                                     required
                                     type="number"
-                                    placeholder="Phone no." 
+                                    placeholder="Phone no."
                                     value={Phone}
-                                    onChange={(e)=>setPhone(e.target.value)}
-                                    />
+                                    onChange={(e) => setPhone(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group as={Col} md="4" controlId="validationCustom02">
                                 <Form.Label className='std'>Parents No.</Form.Label>
                                 <Form.Control
                                     required
                                     type="number"
-                                    placeholder="Perents number" 
+                                    placeholder="Perents number"
                                     value={ParentNo}
-                                    onChange={(e)=>setParentNo(e.target.value)}
-                                    />
+                                    onChange={(e) => setParentNo(e.target.value)}
+                                />
                             </Form.Group>
 
                             <Form.Group as={Col} md="4">
                                 <Form.Label className='std'>Course</Form.Label>
                                 <Form.Select md="4" aria-label="Default select example" value={Course}
-                                    onChange={(e)=>setCourse(e.target.value)}>
+                                    onChange={(e) => setCourse(e.target.value)}>
                                     <option >Course</option>
                                     <option value="B.A-1st">B.A-1st</option>
                                     <option value="B.A-2nd">B.A-2nd</option>
@@ -234,15 +228,15 @@ const StudentDetails = async() =>{
                                     <option value="M.Com-2nd">M.Com-2nd</option>
                                     <option value="M.Com-3rd">M.Com-3rd</option>
 
-                                    
+
                                 </Form.Select>
                             </Form.Group>
 
-                            
+
                             <Form.Group as={Col} md="4">
                                 <Form.Label htmlFor="" className='std'>Gender</Form.Label>
                                 <Form.Select md="4" aria-label="Default select example" value={Gender}
-                                    onChange={(e)=>setGender(e.target.value)}>
+                                    onChange={(e) => setGender(e.target.value)}>
                                     <option >Gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -255,20 +249,20 @@ const StudentDetails = async() =>{
                                 <Form.Control
                                     required
                                     type="text"
-                                    placeholder="local addres" 
+                                    placeholder="local addres"
                                     value={LocalAddress}
-                                    onChange={(e)=>setLocalAddress(e.target.value)}
-                                    />
+                                    onChange={(e) => setLocalAddress(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group as={Col} md="4" controlId="validationCustom02">
                                 <Form.Label className='std'>Permanent address.</Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
-                                    placeholder="Permanent address" 
+                                    placeholder="Permanent address"
                                     value={PermanentAddress}
-                                    onChange={(e)=>setPermanentAddress(e.target.value)}
-                                    />
+                                    onChange={(e) => setPermanentAddress(e.target.value)}
+                                />
                             </Form.Group>
 
                             <Form.Group as={Col} md="4" controlId="validationCustom02">
@@ -276,18 +270,18 @@ const StudentDetails = async() =>{
                                 <Form.Control
                                     required
                                     type="email"
-                                    placeholder="Email" 
+                                    placeholder="Email"
                                     value={Email}
-                                    onChange={(e)=>setEmail(e.target.value)}
-                                    />
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group as={Col} md="4" >
                                 <Form.Label className='std'>Photo</Form.Label>
                                 <Form.Control
                                     required
                                     type="File"
-                                    
-                                    onChange={(e)=>setPhoto(e.target.files[0])}
+
+                                    onChange={(e) => setPhoto(e.target.files[0])}
                                 >
                                 </Form.Control>
                             </Form.Group>
@@ -296,7 +290,7 @@ const StudentDetails = async() =>{
                                 <Form.Control
                                     required
                                     type="File"
-                                    onChange={(e)=>setIdproof(e.target.files[0])}
+                                    onChange={(e) => setIdproof(e.target.files[0])}
                                 >
                                 </Form.Control>
                             </Form.Group>
@@ -308,51 +302,51 @@ const StudentDetails = async() =>{
                                     type="date"
                                     placeholder="Date of Birth"
                                     value={RegistrationDate}
-                                    onChange={(e)=>setRegistrationDate(e.target.value)}
-                                    />
+                                    onChange={(e) => setRegistrationDate(e.target.value)}
+                                />
                             </Form.Group>
-                            
 
-                            
+
+
                         </Row>
                         <Row className="mb-3">
                             <Form.Group as={Col} md="4" controlId="validationCustom03">
                                 <Form.Label className='std'>City</Form.Label>
                                 <Form.Control type="text" placeholder="City" required
-                                 value={City}
-                                 onChange={(e)=>setCity(e.target.value)}
-                                 />
+                                    value={City}
+                                    onChange={(e) => setCity(e.target.value)}
+                                />
                                 <Form.Control.Feedback type="invalid">
-                                Please provide a valid City.
+                                    Please provide a valid City.
                                 </Form.Control.Feedback>
                             </Form.Group>
 
                             <Form.Group as={Col} md="4" controlId="validationCustom04">
                                 <Form.Label className='std'>State</Form.Label>
-                                <Form.Control type="text" placeholder="State" 
-                                required
-                                 value={State}
-                                 onChange={(e)=>setState(e.target.value)}
-                                 />
-         <Form.Control.Feedback type="invalid">
-                  Please provide a valid state.
-                </Form.Control.Feedback>
+                                <Form.Control type="text" placeholder="State"
+                                    required
+                                    value={State}
+                                    onChange={(e) => setState(e.target.value)}
+                                />
+                                <Form.Control.Feedback type="invalid">
+                                    Please provide a valid state.
+                                </Form.Control.Feedback>
 
                             </Form.Group>
                             <Form.Group as={Col} md="4" controlId="validationCustom05">
                                 <Form.Label className='std'>Pin-Code</Form.Label>
-                                <Form.Control type="text" placeholder="Pin-Code" 
-                                 required
-                                 value={PinCode}
-                                 onChange={(e)=>setPinCode(e.target.value)}
+                                <Form.Control type="text" placeholder="Pin-Code"
+                                    required
+                                    value={PinCode}
+                                    onChange={(e) => setPinCode(e.target.value)}
                                 />
                                 <Form.Control.Feedback type="invalid">
-                                Please provide a valid PinCode.
+                                    Please provide a valid PinCode.
                                 </Form.Control.Feedback>
                             </Form.Group>
                         </Row>
 
-                        <Button type="submit" onClick={(e)=>{
+                        <Button type="submit" onClick={(e) => {
                             e.preventDefault()
                             StudentDetails()
                         }}>Submit form</Button>

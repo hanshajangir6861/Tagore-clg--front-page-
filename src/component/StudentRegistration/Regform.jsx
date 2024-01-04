@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -8,9 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import cap from '../Image/cap.png'
 import '../StudentRegistration/Regform.css'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { context } from '../../App';
+
 
 
 function FormExample() {
+    const serverLink = useContext(context)
+    const navigate = useNavigate()
     const [validated, setValidated] = useState(false);
     const [firstName, setFirstname] = useState();
     const [lastName, setLastname] = useState();
@@ -23,7 +28,7 @@ function FormExample() {
 
 
     const StudentRegister = async () => {
-        let result = await axios.post("http://localhost:8000/data/Register", {
+        let result = await axios.post(`${serverLink}/data/Register`, {
             Firstname: firstName,
             Lastname: lastName,
             Username: userName,
@@ -34,14 +39,8 @@ function FormExample() {
 
         })
         result = result.data
-        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
-            alert("please fill in all the fields")
-            return;
-        }
-        else{
-            alert("Successfull Registration")
-            navigate("Stdlogin")
-        }
+        console.log(result)
+        navigate("/")
     }
 
     const handleSubmit = (event) => {

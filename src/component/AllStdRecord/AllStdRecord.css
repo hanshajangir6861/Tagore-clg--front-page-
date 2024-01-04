@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.Alldetails{
+    height: auto;
+    width: 100%;
+}
+
+table.StdClass.table.table-striped.table-bordered.table-hover {
+    margin-top: 50px;
+}
+
+.MoreDetails a {
+        text-decoration: none;
+        color: tomato;
+        font-weight: bold;
+    }
+    .noData {
+        margin-top: 20px;
+        /* font-size: 20px; */
+        font-weight: bold;
+        color: red;
+    }

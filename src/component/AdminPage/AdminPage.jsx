@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import {Container, Row , Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Logo from '../Image/logo.jpeg'
 // import Tagore from '../Image/Staff.jpg'
 import EmailIcon from '@mui/icons-material/Email';
@@ -13,13 +13,13 @@ import { Link } from 'react-router-dom';
 import React from 'react'
 import '../AdminPage/AdminPage.css'
 
- function Admin() {
+function Admin() {
   return (
     <>
       <div className='second-navbar'>
-<Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            
+
             <div className="name">
               <div className="hin">
                 <h1>Hii!!!</h1>
@@ -31,13 +31,13 @@ import '../AdminPage/AdminPage.css'
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-           <button className='logout'>  <Link to="/"  id="log" onClick={() => { localStorage.clear() }}>Logout</Link></button>
-              
+                <button className='logout'>  <Link to="/" id="log" onClick={() => { localStorage.clear() }}>Logout</Link></button>
+
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
-</div>
+      </div>
 
       {/* ...................second-navbar................................ */}
       <div className="wapper-sec">
@@ -48,9 +48,11 @@ import '../AdminPage/AdminPage.css'
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
                 <Nav.Link href="#home"><Link to='/AdminRecord'>Admin-Record</Link></Nav.Link>
-                <Nav.Link href="#link">Complain-Corner</Nav.Link>
-                <Nav.Link href="#link">Student-Record</Nav.Link>
-                <Nav.Link href="#link">Notice</Nav.Link>
+                <Nav.Link href="#link"><Link to='/'>Complain-Corner</Link></Nav.Link>
+                <Nav.Link href="#link"><Link to='/StdDetails'>Attendence/Marks</Link></Nav.Link>
+                <Nav.Link href="#link"><Link to='/Notice'>Notice</Link></Nav.Link>
+                <Nav.Link href="#link"><Link to='/AllStdRecord'>All-Student-Record</Link></Nav.Link>
+
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -60,7 +62,7 @@ import '../AdminPage/AdminPage.css'
 
       </div>
     </>
-    
+
   )
 }
-export default Admin;
+export default Admin;
