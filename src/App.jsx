@@ -34,7 +34,6 @@ import ShowStudentDetails from './component/ShowStudentDetails/ShowStudentDetail
 import NoticeForm from './component/Notice/Notice.jsx'
 import './App.css'
 
-function App() { 
 
 
 export const context = createContext({});
@@ -97,4 +96,4 @@ const serverLink = import.meta.env.VITE_REACT_APP_SERVER_URL;
   )
 }
 
-export default App
+export default App;
