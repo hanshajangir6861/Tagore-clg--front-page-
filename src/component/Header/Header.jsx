@@ -10,9 +10,9 @@ import Ncc from '../Image/ncc-img.jpg'
 import Nss from '../Image/nss-img.jpg'
 import Scout from '../Image/scout-img.jpg'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
-import {Container, Row , Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import EmailIcon from '@mui/icons-material/Email';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 
@@ -21,39 +21,67 @@ import { Link } from 'react-router-dom';
 function Header() {
   const [show, setShow] = useState(false);
 
- 
+
+  // change navbar on scroll//
+  // const [isSticky , setIsSticky] =useState(false)
+
+
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const offset = window.scrollY;
+
+  //     // Adjust the value (e.g., 100) based on when you want the navbar to stick
+  //     setIsSticky(offset > 60);
+  //   };
+
+  //   // Attach the event listener when the component mounts
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   // Detach the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+
+
+
+
 
   return (
     <>
-      <div className="wapper">
-        <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
-            <Navbar.Brand href="#home"><img src={Logo} alt="" /></Navbar.Brand>
-            <div className="name">
-              <div className="hin">
-                <h3>टैगोर पी.जी महाविद्यालय,गुढ़ा गोरजी</h3>
+      {/* <nav className={`navbar ${isSticky ? 'sticky' : ''}`}> */}
+      <div className="mainnav">
+        <div className="wapper sticky-navbar">
+          <Navbar expand="lg" className="bg-body-tertiary">
+            <Container>
+              <Navbar.Brand href="#home"><img src={Logo} alt="" /></Navbar.Brand>
+              <div className="name">
+                <div className="hin">
+                  <h3>टैगोर पी.जी महाविद्यालय,गुढ़ा गोरजी</h3>
+                </div>
+                <div className="eng">
+                  <h3>Tagore P.G College,Gudha Gorji</h3>
+                </div>
               </div>
-              <div className="eng">
-                <h3>Tagore P.G College,Gudha Gorji</h3>
-              </div>
-            </div>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto">
-             <span> <EmailIcon color='dark'/> <a href="">tagore@gmail.com</a> </span>
-                <span> <AddIcCallIcon/> <a href="">0988776665</a></span>
-                <button><Link to='/adminlog'>Login</Link></button>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ms-auto">
+                  <span> <EmailIcon color='dark' /> <a href="">tagore@gmail.com</a> </span>
+                  <span> <AddIcCallIcon /> <a href="">0988776665</a></span>
+                  <button><Link to='/adminlog'>Login</Link></button>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </div>
+
       </div>
-
-
       {/* ...............< Second-navbar >.................. */}
 
 
-      <div className="wapper-sec">
+      <div className="wapper-sec ">
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
             {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
@@ -74,11 +102,11 @@ function Header() {
 
 
 
-    
-     
 
+
+      {/* </nav> */}
     </>
   );
 }
 
-export default Header;
+export default Header;

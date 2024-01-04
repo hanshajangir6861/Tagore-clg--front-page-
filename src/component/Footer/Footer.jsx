@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Footer/Footer.css'
 import EmailIcon from '@mui/icons-material/Email';
@@ -9,14 +9,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import {Container, Row , Col } from 'react-bootstrap'
 
+
+
+
 function Footer() {
+ 
   return (
     <div className="main-footer">
 <Container>
-      <Row className='rows'>
+      <Row className='rows' >
         
 
-        <Col className='cols' lg={4}>
+        <Col className='cols' lg={4}  >
           <h2>Tagore P.G College</h2>
 
           <p>Tagore PG College Gudha Gorji, <br />Jhunjhunu is a very popular college  <br />in the state of Rajasthan.It is one of  the <br /> leading colleges  in Arts,Humanities and <br /> Social Scieces,etc.</p>
