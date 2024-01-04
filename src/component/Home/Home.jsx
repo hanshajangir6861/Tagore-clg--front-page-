@@ -15,14 +15,20 @@ import bca from '../Image/bca.jpeg'
 import Bba from '../Image/bba.jpg'
 import Bcom from '../Image/bcom.jpg'
 import '../Home/Home.css'
-import EmailIcon from '@mui/icons-material/Email';
+// import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 function Home() {
   const [validated, setValidated] = useState(false);
+useEffect(()=>{
+  AOS.init({duration:2000});
 
+})
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -78,7 +84,7 @@ function Home() {
   {/* {..........About college................  } */}
 
 
-  <div className="about-college">
+  <div className="about-college" >
     <h2>ABOUT-COLLEGE</h2>
     <div className='underline'>
 
@@ -86,7 +92,7 @@ function Home() {
     <div className='college-box'>
       <Container>
         <Row className='rows'>
-          <Col className='cols' lg={6}>
+          <Col className='cols' lg={6} data-aos="zoom-in">
             <Card style={{}}>
               <Card.Img variant="top" src={Director} />
               <Card.Body>
@@ -99,14 +105,14 @@ function Home() {
               </Card.Body>
             </Card>
           </Col>
-          <Col className='cols' lg={6}>
+          <Col className='cols' lg={6} data-aos="zoom-in">
             <Card style={{}}>
               <Card.Img variant="top" src={Director} />
               <Card.Body>
                 <Card.Title>Principle</Card.Title>
                 <Card.Text>
                   <h3>Dr.Surender Soni</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores incidunt voluptatibus sit, quaerat nisi!</p>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores incidunt voluptatibus sit.</p>
                 </Card.Text>
 
               </Card.Body>
@@ -129,10 +135,10 @@ function Home() {
 
     <div className='fac-box-one'>
       <Container>
-        <Row className='rows'>
+        <Row className='rows' >
           <Col className='cols' lg={4}>
-            <Card style={{}}>
-              <Card.Img variant="top" src={Library} />
+            <Card style={{}} data-aos="zoom-in-down">
+              <Card.Img variant="top" src={Library}  />
               <Card.Body>
                 <Card.Title>Library</Card.Title>
                 <Card.Text>
@@ -144,8 +150,8 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
-              <Card.Img variant="top" src={Computer} />
+            <Card style={{}} data-aos="zoom-in-down">
+              <Card.Img variant="top" src={Computer}  />
               <Card.Body>
                 <Card.Title>Computer lab</Card.Title>
                 <Card.Text>
@@ -157,7 +163,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down">
               <Card.Img variant="top" src={Class} />
               <Card.Body>
                 <Card.Title> Smart-Classrooms</Card.Title>
@@ -177,7 +183,7 @@ function Home() {
       <Container>
         <Row className='rows'>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down" >
               <Card.Img variant="top" src={Staff} />
               <Card.Body>
                 <Card.Title>Staff-Room</Card.Title>
@@ -190,7 +196,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down">
               <Card.Img variant="top" src={Faculty} />
               <Card.Body>
                 <Card.Title>Best-Faculty</Card.Title>
@@ -203,7 +209,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-down">
               <Card.Img variant="top" src={Auditorium} />
               <Card.Body>
                 <Card.Title>Auditorium</Card.Title>
@@ -224,7 +230,7 @@ function Home() {
   </div>
 
 
-  {/* ................,courses................. */ }
+  {/* ................courses................. */ }
 
   <div className="our-cour">
     <h2>OUR-COURSES </h2>
@@ -232,7 +238,7 @@ function Home() {
       <Container>
         <Row className='rows'>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-right">
               <Card.Img variant="top" src={bca} />
               <Card.Body>
                 <Card.Title>BCA</Card.Title>
@@ -245,7 +251,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-right">
               <Card.Img variant="top" src={Bba} />
               <Card.Body>
                 <Card.Title>BBA</Card.Title>
@@ -258,7 +264,7 @@ function Home() {
             </Card>
           </Col>
           <Col className='cols' lg={4}>
-            <Card style={{}}>
+            <Card style={{}} data-aos="zoom-in-right">
               <Card.Img variant="top" src={Bcom} />
               <Card.Body>
                 <Card.Title>B.Com</Card.Title>
@@ -352,6 +358,7 @@ function Home() {
           <div className='mapbox'>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.528965756721!2d75.5213261752605!3d27.88573637608087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396ccd5bd01662eb%3A0x43d184498d282d59!2sTagore%20College%20Campus!5e0!3m2!1sen!2sin!4v1702703900588!5m2!1sen!2sin"
+      
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"

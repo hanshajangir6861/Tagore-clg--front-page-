@@ -176,27 +176,3 @@ margin: auto;
 .form-main .form-label {
     color: black;
 }
-.formname h3{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 7px;
-    border-bottom: 3px solid black;
-    width: 50%;
-    margin: auto;
-
-}
-.formbox{
-    margin-top: 20px;
-}
-.mapbox{
-    margin-top: 20px;
-    height: 310px;
-}
-.mapname h3{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 7px;
-    border-bottom: 3px solid black;
-    width: 33%;
-    margin: auto;
-}

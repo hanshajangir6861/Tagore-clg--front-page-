@@ -1,23 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Footer/Footer.css'
 import EmailIcon from '@mui/icons-material/Email';
-
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import {Container, Row , Col } from 'react-bootstrap'
 
+
+
+
 function Footer() {
+ 
   return (
     <div className="main-footer">
 <Container>
-      <Row className='rows'>
+      <Row className='rows' >
         
 
         <Col className='cols' lg={4}>
-          <div className='clgnamefooter'>
           <h2>Tagore P.G College</h2>
           </div>
           
@@ -40,10 +42,7 @@ function Footer() {
 
         </Col>
         <Col className='cols' lg={4}>
-          <div className='socialname'>
-          <h2>Social media</h2>
-          </div>
-         
+         <h2>Social media</h2>
          <p> <EmailIcon/>tagore@gmail.com</p>
          <p> <WhatsAppIcon/>Whatsapp</p>
          <p> <FacebookIcon/>Facebook</p>

@@ -16,18 +16,21 @@ function FormExample() {
     const serverLink = useContext(context)
     const navigate = useNavigate();
     const [validated, setValidated] = useState(false);
-    const [firstName, setFirstname] = useState();
-    const [lastName, setLastname] = useState();
-    const [userName, setUsername] = useState();
-    const [fathersName, setFathername] = useState();
-    const [mothersName, setMothername] = useState();
-    const [phoneNo, setPhoneNo] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [firstName, setFirstname] = useState('');
+    const [lastName, setLastname] = useState('');
+    const [userName, setUsername] = useState('');
+    const [fathersName, setFathername] = useState('');
+    const [mothersName, setMothername] = useState('');
+    const [phoneNo, setPhoneNo] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [emailCheck , setemailCheck] = useState('')
 
 
+    
 
     const AdminRegister = async () => {
+       
         let result = await axios.post(`${serverLink}/admindata/Register`, {
             FirstName: firstName,
             LastName: lastName,
@@ -39,10 +42,19 @@ function FormExample() {
 
         })
         result = result.data
-        console.log(result)
-        navigate("/adminlog")
+        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
+            alert("please fill in all the fields")
+            return;
+        }
+        else{
+            alert("Successfull Registration")
+            navigate("/adminlog")
+        }
+       
+        
     }
 
+    
 
 
     const handleSubmit = (event) => {
@@ -59,16 +71,7 @@ function FormExample() {
         <>
 
             <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={cap} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-
-                        <h6>TagoreCollege@gmail.com</h6>
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
+               
                 <div className="hadding">
                     <h1>EMPLOYEE REGISTRATION FORM</h1>
                     <h6>Enter your registration information below</h6>
@@ -142,7 +145,7 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group as={Col} md="3" controlId="validationCustom05">
+                        <Form.Group as={Col} md="3" controlId="validationCustom06">
                             <Form.Label className='emploreg'>Email</Form.Label>
                             <Form.Control type="text" placeholder="Enter your Email"  required value={email}
                                 onChange={(e) => setEmail(e.target.value)} />
@@ -151,35 +154,48 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group as={Col} md="3" controlId="validationCustom05">
-                            <Form.Label className='emploreg'>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Enter your Password" required  value={password}
-                                onChange={(e) => setPassword(e.target.value)} />
-                            <Form.Control.Feedback type="invalid">
-                                {/* Please provide a valid zip. */}
-                            </Form.Control.Feedback>
-                        </Form.Group>
+                    
 
+                           <Form.Group as={Col} md="3" controlId="validationCustom07">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="Password" placeholder="Enter your Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required />
+                                <Form.Control.Feedback type="invalid">
+
+                                </Form.Control.Feedback>
+                            </Form.Group>
 
 
                     </Row>
-                    <Form.Group className="mb-3">
+           
+
+
+
+                     <Form.Group className="mb-3">
                         <Form.Check
                             required
                             label="Agree to terms and conditions"
                             feedback="You must agree before submitting."
                             feedbackType="invalid"
+                            id='CheckCondition'
                         />
                     </Form.Group>
                     <Button type="submit" 
                     onClick={(e)=>{
                  e.preventDefault();
+                 const CheckCondition = document.getElementById("CheckCondition")
+                 if(CheckCondition && !CheckCondition){
+                    alert("Please Agree to the terms and Conditions.");
+                    return;
+                 }
                     AdminRegister()
-                    }}>Submit</Button>
+                    }}
+                    >Submit</Button>
                 </div>
             </Form>
         </>
-    );
-}
+    )}
 
 export default FormExample;

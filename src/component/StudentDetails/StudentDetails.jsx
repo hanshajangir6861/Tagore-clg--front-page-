@@ -4,6 +4,7 @@ import {Container, Row , Col } from 'react-bootstrap'
 import '../StudentDetails/StudentDetails.css'
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import { Link } from 'react-router-dom';
 
 export default function StudentDetails() {
   return (
@@ -26,7 +27,7 @@ export default function StudentDetails() {
               </Col>
               <Col className="lower" lg={3}>
                 <AssignmentIcon/>
-                <h2>Results</h2>
+                <h2><Link to='/stdResult'>Results</Link></h2>
               </Col>
               <Col className="lower" lg={2}>
               </Col>

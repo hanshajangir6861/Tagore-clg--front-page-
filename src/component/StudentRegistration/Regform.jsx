@@ -39,9 +39,14 @@ function FormExample() {
 
         })
         result = result.data
-        alert("Registration Successfull")
-    navigate("/Stdlogin")
-       
+        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
+            alert("please fill in all the fields")
+            return;
+        }
+        else{
+            alert("Successfull Registration")
+            navigate("/adminlog")
+        }
     }
 
     const handleSubmit = (event) => {
@@ -58,16 +63,7 @@ function FormExample() {
         <>
 
             <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={cap} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-
-                        <h6>TagoreCollege@gmail.com</h6>
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
+                
                 <div className="hadding">
                     <h1>COLLEGE REGISTRATION FORM</h1>
                     <h6>Enter your registration information below</h6>
@@ -171,7 +167,19 @@ function FormExample() {
 
 
                     </Row>
-                    <Form.Group className="mb-3">
+                    {/* <Form.Group className="mb-3">
+              <Form.Check
+                required
+                label="Agree to terms and conditions"
+                feedback="You must agree before submitting."
+                feedbackType="invalid"
+              />
+            </Form.Group>
+            <Button type="submit">Submit form</Button> */}
+        
+
+
+            <Form.Group className="mb-3">
                         <Form.Check
                             required
                             label="Agree to terms and conditions"
