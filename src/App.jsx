@@ -35,7 +35,7 @@ import NoticeForm from './component/Notice/Notice.jsx'
 import StdResultPage from './component/StdResultPage/StdResultPage.jsx'
 import './App.css'
 
-function App() { 
+
 
 
 export const context = createContext({});
@@ -48,8 +48,9 @@ const serverLink = import.meta.env.VITE_REACT_APP_SERVER_URL;
     <>
      <BrowserRouter>
         <context.Provider value={serverLink}>
+            <Header/>
             <Routes>
-                <Route index element={<Header />} />
+                {/* <Route index element={<Header />} /> */}
                 <Route path='/contactus' element={<ContactUs />} />
                 <Route path='/mediagallery' element={<Mediagallary />} />
                 <Route path='/about' element={<Aboutus />} />
