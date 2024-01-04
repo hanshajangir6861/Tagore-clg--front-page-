@@ -34,8 +34,14 @@ function FormExample() {
 
         })
         result = result.data
-        console.log(result)
-        navigate("/")
+        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
+            alert("please fill in all the fields")
+            return;
+        }
+        else{
+            alert("Successfull Registration")
+            navigate("Stdlogin")
+        }
     }
 
     const handleSubmit = (event) => {
@@ -165,7 +171,19 @@ function FormExample() {
 
 
                     </Row>
-                    <Form.Group className="mb-3">
+                    {/* <Form.Group className="mb-3">
+              <Form.Check
+                required
+                label="Agree to terms and conditions"
+                feedback="You must agree before submitting."
+                feedbackType="invalid"
+              />
+            </Form.Group>
+            <Button type="submit">Submit form</Button> */}
+        
+
+
+            <Form.Group className="mb-3">
                         <Form.Check
                             required
                             label="Agree to terms and conditions"

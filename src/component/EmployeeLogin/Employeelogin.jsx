@@ -109,19 +109,31 @@ function FormExample() {
 
 
                         </Row>
-                        <Form.Group className="mb-3">
-                            <Form.Check
-                                required
-                                label="Agree to terms and conditions"
-                                feedback="You must agree before submitting."
-                                feedbackType="invalid"
-                            />
-                        </Form.Group>
-                        <Button type="submit" 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            AdminLogin();
-                        }}>Submit</Button>
+                        {/* <Form.Check
+                required
+                label="Agree to terms and conditions"
+                feedback="You must agree before submitting."
+                feedbackType="invalid"
+              />
+<Button
+    type="submit"
+    onClick={(e) => {
+        e.preventDefault();
+        AdminLogin();
+    }}
+>
+    Submit
+</Button> */}
+
+              <Form.Group className="mb-3">
+              <Form.Check
+                required
+                label="Agree to terms and conditions"
+                feedback="You must agree before submitting."
+                feedbackType="invalid"
+              />
+            </Form.Group>
+            <Button type="submit">Submit</Button>
                     </div>
                 </Form>
             </div >
