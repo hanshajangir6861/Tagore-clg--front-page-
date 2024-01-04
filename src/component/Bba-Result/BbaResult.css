@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bba-box{
+    height: 100vh;
+    width: 100%;
+     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../Image/business.avif') ;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.bba{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+.bba-boxes .col-lg-3 {
+    height: 200px;
+    border: 2px solid white;
+    margin: auto;
+    border-radius: 20px;
+    padding: 40px 0px;
+
+}
+.bba-boxes{
+    text-align: center;
+    color: white;
+    /* padding: 20px 0; */
+    margin: 20px;
+}
+.bba-boxes svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+.bba-boxes.row {
+    margin-top: 100px;
+}
+.bba-boxes .col-lg-3:hover{
+    background-color: rgba(3, 3, 41, 0.873);
+    border: 0;
+}

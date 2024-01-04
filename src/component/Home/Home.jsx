@@ -15,6 +15,7 @@ import bca from '../Image/bca.jpeg'
 import Bba from '../Image/bba.jpg'
 import Bcom from '../Image/bcom.jpg'
 import '../Home/Home.css'
+import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -363,6 +364,8 @@ function Home() {
 
     </div>
   </Container>
+
+
     </>
 
   )
