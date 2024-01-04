@@ -49,3 +49,12 @@
     border-bottom: 3px solid yellow;
     width: 35%;
 }
+.clgnamefooter h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 47%;
+}
+.socialmedia a {
+    color: white;
+    text-decoration: none;
+}

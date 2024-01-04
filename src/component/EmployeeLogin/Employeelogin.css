@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
 
 .container.hadder{
     display: flex;
@@ -26,4 +27,7 @@
     color: white;
     border-radius: 10px;
 }
+/* .employloginbutton button{
+  text-align: justify;
+} */
 

@@ -109,11 +109,14 @@ function FormExample() {
                                 feedbackType="invalid"
                             />
                         </Form.Group>
+                        <div className='employloginbutton'>
                         <Button type="submit" 
                         onClick={(e) => {
                             e.preventDefault();
                             AdminLogin();
                         }}>Submit</Button>
+                        </div>
+                        
                     </div>
                 </Form>
             </div >

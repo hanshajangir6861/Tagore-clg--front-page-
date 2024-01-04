@@ -85,10 +85,9 @@ useEffect(()=>{
 
 
   <div className="about-college" >
+    
     <h2>ABOUT-COLLEGE</h2>
-    <div className='underline'>
-
-    </div>
+   
     <div className='college-box'>
       <Container>
         <Row className='rows'>
