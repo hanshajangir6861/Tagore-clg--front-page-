@@ -32,7 +32,9 @@ import StudentDetails from './component/StudentDetails/StudentDetails.jsx'
 import AllStdRecord from './component/AllStdRecord/AllStdRecord.jsx'
 import ShowStudentDetails from './component/ShowStudentDetails/ShowStudentDetails.jsx'
 import NoticeForm from './component/Notice/Notice.jsx'
+import StdResultPage from './component/StdResultPage/StdResultPage.jsx'
 import './App.css'
+
 
 
 
@@ -46,8 +48,9 @@ const serverLink = import.meta.env.VITE_REACT_APP_SERVER_URL;
     <>
      <BrowserRouter>
         <context.Provider value={serverLink}>
+            <Header/>
             <Routes>
-                <Route index element={<Header />} />
+                {/* <Route index element={<Header />} /> */}
                 <Route path='/contactus' element={<ContactUs />} />
                 <Route path='/mediagallery' element={<Mediagallary />} />
                 <Route path='/about' element={<Aboutus />} />
@@ -86,6 +89,8 @@ const serverLink = import.meta.env.VITE_REACT_APP_SERVER_URL;
                 <Route path='/StdDetails' element={<StudentDetails />} />
                 <Route path='/AllStdRecord' element={<AllStdRecord />} />
                 <Route path='/Notice' element={<NoticeForm />} />
+                <Route path='/tdResult' element={<StdResultPage />} />
+
                 
 
             </Routes>

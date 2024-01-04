@@ -25,20 +25,6 @@ function FormExample() {
     return (
         <>
 
-            <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={Ncc} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-
-                        <h6>TagoreCollege@gmail.com</h6>
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
-
-
-            </div>
             <div className="imageNcc">
                 <h1>NATIONAL CADET CORPS </h1>
                 <h2>(NCC)</h2>
