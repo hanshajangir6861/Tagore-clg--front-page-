@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.student-back{
+    height: 100vh;
+    width: 100%;
+     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../Image/self.webp') ;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.student{
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+ 
+}
+.student h1{
+    text-decoration: underline 2px solid white;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+.student h3{
+    color: red;
+}
+.lower.col-lg-3 {
+    height: 200px;
+    border: 2px solid white;
+    margin: auto;
+    border-radius: 20px;
+}
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    /* color: white; */
+    font-size: 100px;
+    /* text-align: center; */
+    /* margin-left: 100px; */
+    /* margin-top: 20px; */
+}
+.lower{
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+.lower.col-lg-3:hover{
+    background-color: rgba(2, 2, 45, 0.748);
+    border: 0;
+}

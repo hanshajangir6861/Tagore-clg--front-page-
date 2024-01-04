@@ -8,7 +8,7 @@
 }
 .wapper .ms-auto
 {
-    gap: 20px;
+    /* gap: 20px; */
     /* font-size: 20px; */
     color: #b71109;
 }
@@ -23,7 +23,7 @@ background-color: white !important;
     height: 35px;
     width: 90px;
     border-radius: 20px;
-    background-color: rgb(216, 18, 18);
+    background-color:blue !important;
     text-align: center;
     color: #fff;
     border: 0;
@@ -33,7 +33,7 @@ background-color: white !important;
 .ms-auto  a {
     color: #b71109;
     text-decoration: none;
-    /* font-size: 15px; */
+    font-size: 13px;
 }
 .ms-auto button a{
     color: white;
@@ -43,22 +43,31 @@ background-color: white !important;
 .wapper .name h3
 {
     color: #b71109;
-    /* font-size: 25px; */
+    font-size: 17px;
 }
-
 .bg-body-tertiary a img {
-    height: 135px;
-}
+    height: 71px  !important;
+  }
 /* ............wapper-sec.......... */
 
 .wapper-sec .bg-body-tertiary
 {
     background-color: rgb(32 13 105) !important;
-    height: auto;
-    padding: 20px;
+    /* height: auto; */
+    padding: 2px !important;
+    text-align: center;
 }
 
-
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: var(--bs-navbar-color);
+    background-color: #e3d6d6;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+  }
 /* .wapper-sec .me-auto
 {
     display: flex !important;
@@ -75,6 +84,9 @@ background-color: white !important;
     border: 2px solid white;
     background-color: white;
 }
+<<<<<<< HEAD
+
+=======
 .wapper-sec .container
 {
     display: flex !important; 
@@ -82,6 +94,7 @@ background-color: white !important;
     align-items: center !important;
     text-align: center !important; 
 } 
+>>>>>>> 0328fe9a3679a138bcdc128bbfaa2be323d293b7
 .wapper-sec .nav-link {
     height: 40px;
     width: 140px;
@@ -284,7 +297,12 @@ text-decoration: underline 2px solid black;
     text-decoration: none;
 }
 
-
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: var(--bs-navbar-nav-link-padding-x);
+      padding-left: var(--bs-navbar-nav-link-padding-x);
+      width: 185px;
+    }}
 
 
 
@@ -313,3 +331,9 @@ text-decoration: underline 2px solid black;
     text-decoration: underline 2px solid yellow;
 }
 
+
+@media (max-width:995px){
+    .wapper-sec .m-auto a{
+        margin-top: 15px;
+    }
+}  

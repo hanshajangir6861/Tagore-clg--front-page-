@@ -35,12 +35,14 @@ import NoticeForm from './component/Notice/Notice.jsx'
 import StdResultPage from './component/StdResultPage/StdResultPage.jsx'
 import './App.css'
 
+function App() { 
 
 
 export const context = createContext({});
 
 function App() {
 const serverLink = import.meta.env.VITE_REACT_APP_SERVER_URL;
+
 
   return (
     <>

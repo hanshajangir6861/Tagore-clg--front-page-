@@ -103,7 +103,7 @@ function Home() {
                 <Card.Title>Principle</Card.Title>
                 <Card.Text>
                   <h3>Dr.Surender Soni</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores incidunt voluptatibus sit, quaerat nisi!</p>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores incidunt voluptatibus sit.</p>
                 </Card.Text>
 
               </Card.Body>
