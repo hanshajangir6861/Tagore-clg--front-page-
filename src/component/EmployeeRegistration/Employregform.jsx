@@ -24,6 +24,7 @@ function FormExample() {
     const [phoneNo, setPhoneNo] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [emailCheck , setemailCheck] = useState('')
 
 
 
@@ -41,8 +42,10 @@ function FormExample() {
         result = result.data
         console.log(result)
         navigate("/adminlog")
+        
     }
 
+    
 
 
     const handleSubmit = (event) => {
