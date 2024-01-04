@@ -3,15 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container .hadder{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
-}
-.hadder img {
-    height: 100px;
-    width: 121px;
-}
+
 .imageBca{
     background:linear-gradient(rgba(0, 0, 0, 0.637) , rgba(0, 0, 0, 0.61) ,rgba(0, 0, 0, 0.541)), url("/src/component/Image/Bca.jpg");
     height: 500px;

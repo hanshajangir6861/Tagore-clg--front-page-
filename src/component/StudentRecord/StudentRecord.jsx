@@ -60,36 +60,43 @@ function StudentRecord() {
         formData.append("PinCode", PinCode);
 
 
-        let result = await axios.post(`${serverLink}/StdRecord/StudentRecordadd`, formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
-        result = result.data
-        console.log(result)
-        if (result) {
-            alert("Your Data has been added")
-            setFirstname('')
-            setLastname('')
-            setFathername('')
-            setMothername('')
-            setEmail('')
-            setDob('')
-            setPhone('')
-            setParentNo('')
-            setPhoto('')
-            setRegistrationDate('')
-            setLocalAddress('')
-            setPermanentAddress('')
-            setIdproof('')
-            setCourse('')
-            setGender('')
-            setState('')
-            setPinCode('')
-            setCity('')
+    let result = await axios.post("http://localhost:8000/StdRecord/StudentRecordadd", formData,{
+        headers:{
+            'Content-Type' : 'multipart/form-data'
         }
-
+    })
+   
+    if(!Firstname ||!Lastname || !Dob || !Fathername ||!Phone || !Email || !Mothername || !ParentNo ||!Course ||!Photo ||!Idproof ||!RegistrationDate ||!Gender  ||!LocalAddress ||!PermanentAddress ||!City || !State ||!PinCode ){
+        alert("Please fill in all the fields")
+        return;
     }
+    else{
+        alert("Your data has been added")
+        
+    }
+    if (result) {
+        alert("Your Data has been added")
+        setFirstname('')
+        setLastname('')
+        setFathername('')
+        setMothername('')
+        setEmail('')
+        setDob('')
+        setPhone('')
+        setParentNo('')
+        setPhoto('')
+        setRegistrationDate('')
+        setLocalAddress('')
+        setPermanentAddress('')
+        setIdproof('')
+        setCourse('')
+        setGender('')
+        setState('')
+        setPinCode('')
+        setCity('')
+    }
+    
+}
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -104,18 +111,6 @@ function StudentRecord() {
 
     return (
         <>
-            <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={Student} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-                        <h6>Gudha Gorji, jhunujhunu, rajasthan</h6>
-
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
-            </div>
             <div className="student-form">
                 <h2>STUDENT FORM</h2>
                 <Container>

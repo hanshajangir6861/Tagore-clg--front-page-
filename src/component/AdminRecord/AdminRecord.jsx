@@ -71,12 +71,13 @@ function AdminRecord() {
                 'Content-Type' : 'multipart/form-data'
             }
         })
-        result = result.data
-        console.log(result)
-        if (result) {
-            alert("Your Data has been added")
-           
-           
+        if(!Firstname ||!Lastname || !Dob || !Fathername ||!Phoneno || !Email || !Mothername || !Qualification ||!Subject ||!Photo ||!Idproof ||!Signature ||!Salary ||!Designation ||!LocalAddress ||!PermanentAddress ||!City || !State ||!PinCode ||!Time){
+            alert("Please fill in all the fields")
+            return;
+        }
+        else{
+            alert("Your data has been added")
+            
         }
     }
 

@@ -54,18 +54,7 @@ function FormExample() {
     return (
         <>
 
-            <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={cap} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-
-                        <h6>TagoreCollege@gmail.com</h6>
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
-            </div>
+          
             <div className='main'>
                 <div className="container">
                     <div className="Adminreg">
@@ -120,11 +109,11 @@ function FormExample() {
                                 feedbackType="invalid"
                             />
                         </Form.Group>
-                        <Button type="submit"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                AdminLogin();
-                            }}>Submit</Button>
+                        <Button type="submit" 
+                        onClick={(e) => {
+                            e.preventDefault();
+                            AdminLogin();
+                        }}>Submit</Button>
                     </div>
                 </Form>
             </div >
