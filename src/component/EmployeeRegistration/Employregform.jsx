@@ -149,6 +149,7 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
+
                         <Form.Group as={Col} md="3" controlId="validationCustom05">
                             <Form.Label className='emploreg'>Password</Form.Label>
                             <Form.Control type="password" placeholder="Enter your Password" required  value={password}
@@ -157,6 +158,7 @@ function FormExample() {
                                 {Please provide a valid zip.}
                             {</Form.Control.Feedback> }
                         {/* </Form.Group> */}
+
 
 
 
@@ -173,18 +175,6 @@ function FormExample() {
 
 
                     </Row>
-                    {/* {<Form.Group className="mb-3"> }
-              <Form.Check
-                required
-                label="Agree to terms and conditions"
-                feedback="You must agree before submitting."
-                feedbackType="invalid"
-              />
-            </Form.Group>
-             <Button type="submit">Submit</Button> */}
-
-
-
                      <Form.Group className="mb-3">
                         <Form.Check
                             required
