@@ -17,7 +17,10 @@ function Footer() {
         
 
         <Col className='cols' lg={4}>
+          <div className='clgnamefooter'>
           <h2>Tagore P.G College</h2>
+          </div>
+          
 
           <p>Tagore PG College Gudha Gorji, <br />Jhunjhunu is a very popular college  <br />in the state of Rajasthan.It is one of  the <br /> leading colleges  in Arts,Humanities and <br /> Social Scieces,etc.</p>
           
@@ -25,7 +28,10 @@ function Footer() {
         </Col>
        
         <Col className='cols' lg={4}>
-         <h2>Contact Us</h2>
+          <div className='contactusname'>
+          <h2>Contact Us</h2>
+          </div>
+         
          <p>Tagore PG College Gudha Gorji-333022,Jhunjhunu,Rajasthan</p>
          <p>+919460066518</p>
          <p>+917597607102</p>
@@ -34,7 +40,10 @@ function Footer() {
 
         </Col>
         <Col className='cols' lg={4}>
-         <h2>Social media</h2>
+          <div className='socialname'>
+          <h2>Social media</h2>
+          </div>
+         
          <p> <EmailIcon/>tagore@gmail.com</p>
          <p> <WhatsAppIcon/>Whatsapp</p>
          <p> <FacebookIcon/>Facebook</p>

@@ -30,5 +30,22 @@
     /* padding: 0px 170px; */
     font-size: 20px; 
     text-align: left;
-    text-decoration: underline 2px solid yellow;
+    /* text-decoration: underline 2px solid yellow; */
+    
+}
+.clgnamefooter h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 47%;
+
+}
+.contactusname h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 30%;
+}
+.socialname h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 35%;
 }

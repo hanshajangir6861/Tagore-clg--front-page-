@@ -80,6 +80,9 @@ function Home() {
 
   <div className="about-college">
     <h2>ABOUT-COLLEGE</h2>
+    <div className='underline'>
+
+    </div>
     <div className='college-box'>
       <Container>
         <Row className='rows'>
@@ -282,6 +285,11 @@ function Home() {
     <div className="form-main">
       <Row className='rows' mt-5 mb-5>
         <Col className='cols' lg={6} >
+          <div className='formname'>
+           <h3>Registeration-Form</h3> 
+          </div>
+          <div className='formbox'>
+
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
               <Form.Group as={Col} md="6" controlId="validationCustom01">
@@ -290,7 +298,7 @@ function Home() {
                   required
                   type="text"
                   placeholder="First name"
-                // defaultValue="Mark"
+              
                 />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </Form.Group>
@@ -300,25 +308,11 @@ function Home() {
                   required
                   type="text"
                   placeholder="Last name"
-                // defaultValue="Otto"
+              
                 />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </Form.Group>
-              {/* <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-        <Form.Label>Username</Form.Label>
-        <InputGroup hasValidation>
-          <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
-          <Form.Control
-            type="text"
-            placeholder="Username"
-            aria-describedby="inputGroupPrepend"
-            required
-          />
-          <Form.Control.Feedback type="invalid">
-            Please choose a username.
-          </Form.Control.Feedback>
-        </InputGroup>
-      </Form.Group> */}
+             
             </Row>
             <Row className="mb-3">
               <Form.Group as={Col} md="6" controlId="validationCustom03">
@@ -348,8 +342,14 @@ function Home() {
             </Form.Group>
             <Button type="submit">Submit form</Button>
           </Form>
+          </div>
+         
         </Col>
         <Col className='cols' lg={6}>
+          <div className='mapname'>
+            <h3>Live-Location</h3>
+          </div>
+          <div className='mapbox'>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.528965756721!2d75.5213261752605!3d27.88573637608087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396ccd5bd01662eb%3A0x43d184498d282d59!2sTagore%20College%20Campus!5e0!3m2!1sen!2sin!4v1702703900588!5m2!1sen!2sin"
             style={{ border: 0 }}
@@ -357,6 +357,8 @@ function Home() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+          </div>
+         
         </Col>
       </Row>
 
