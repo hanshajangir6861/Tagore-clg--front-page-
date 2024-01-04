@@ -27,8 +27,10 @@ function FormExample() {
     const [emailCheck , setemailCheck] = useState('')
 
 
+    
 
     const AdminRegister = async () => {
+       
         let result = await axios.post(`${serverLink}/admindata/Register`, {
             FirstName: firstName,
             LastName: lastName,
@@ -41,20 +43,9 @@ function FormExample() {
         })
 
         result = result.data
-        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
-            alert("please fill in all the fields")
-            return;
-        }
-        else{
-            alert("Successfull Registration")
-            navigate("/adminlog")
-        }
-    
-        
-      
-
         console.log(result)
         navigate("/adminlog")
+       }
         
     }
 
@@ -149,7 +140,7 @@ function FormExample() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group as={Col} md="3" controlId="validationCustom05">
+                        <Form.Group as={Col} md="3" controlId="validationCustom06">
                             <Form.Label className='emploreg'>Email</Form.Label>
                             <Form.Control type="text" placeholder="Enter your Email"  required value={email}
                                 onChange={(e) => setEmail(e.target.value)} />
@@ -157,6 +148,18 @@ function FormExample() {
                                 {/* Please provide a valid zip. */}
                             </Form.Control.Feedback>
                         </Form.Group>
+
+
+                        <Form.Group as={Col} md="3" controlId="validationCustom05">
+                            <Form.Label className='emploreg'>Password</Form.Label>
+                            <Form.Control type="password" placeholder="Enter your Password" required  value={password}
+                                onChange={(e) => setPassword(e.target.value)} />
+                            <Form.Control.Feedback type="invalid">
+                                {Please provide a valid zip.}
+                            {</Form.Control.Feedback> }
+                        {/* </Form.Group> */}
+
+
 
 
                            <Form.Group as={Col} md="3" controlId="validationCustom05">
@@ -178,13 +181,20 @@ function FormExample() {
                             label="Agree to terms and conditions"
                             feedback="You must agree before submitting."
                             feedbackType="invalid"
+                            id='CheckCondition'
                         />
                     </Form.Group>
                     <Button type="submit" 
                     onClick={(e)=>{
                  e.preventDefault();
+                 const CheckCondition = document.getElementById("CheckCondition")
+                 if(CheckCondition && !CheckCondition){
+                    alert("Please Agree to the terms and Conditions.");
+                    return;
+                 }
                     AdminRegister()
-                    }}>Submit</Button>
+                    }}
+                    >Submit</Button>
                 </div>
             </Form>
         </>
