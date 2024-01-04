@@ -35,7 +35,7 @@ import NoticeForm from './component/Notice/Notice.jsx'
 import StdResultPage from './component/StdResultPage/StdResultPage.jsx'
 import './App.css'
 
-function App() { 
+
 
 
 export const context = createContext({});
