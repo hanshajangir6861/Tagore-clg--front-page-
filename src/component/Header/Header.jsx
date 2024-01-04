@@ -9,6 +9,14 @@ import Bgsecond from '../Image/bg-1.jpg'
 import Ncc from '../Image/ncc-img.jpg'
 import Nss from '../Image/nss-img.jpg'
 import Scout from '../Image/scout-img.jpg'
+// import Card from '.react-bootstrap' 
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Director from '../Image/director.png'
+// import Director from '../Image/director.png'
+import Library from '../Image/library.jpg'
+
+
 
 import { useState, useEffect } from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -65,6 +73,7 @@ function Header() {
                   <h3>Tagore P.G College,Gudha Gorji</h3>
                 </div>
               </div>
+
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
@@ -78,6 +87,20 @@ function Header() {
         </div>
 
       </div>
+
+            </div>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto">
+             <span> <EmailIcon color='dark'/><a href="mailto:tagorecollege@gmail.com">tagorecollege@gmail.com</a></span>
+                <span> <AddIcCallIcon/> <a href="">+91-1234567890</a></span>
+                <button><Link to='/adminlog'>Login</Link></button>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
+
       {/* ...............< Second-navbar >.................. */}
 
 
@@ -88,7 +111,7 @@ function Header() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
-                <Nav.Link href="#home"><Link to='/home'>Home</Link></Nav.Link>
+                <Nav.Link href="#link"><Link to='/home'>Home</Link></Nav.Link>
                 <Nav.Link href="#link"><Link to='/about'>About</Link> </Nav.Link>
                 <Nav.Link href="#link"><Link to='/contactus'>Contact</Link></Nav.Link>
                 <Nav.Link href="#link"><Link to='/mediagallery'>Media</Link></Nav.Link>
@@ -102,11 +125,13 @@ function Header() {
 
 
 
+  
 
-
-      {/* </nav> */}
     </>
   );
 }
 
-export default Header;
+export default Header;
+
+
+

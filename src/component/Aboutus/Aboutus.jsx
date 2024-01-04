@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 
 
 
+
 function BasicExample() {
   useEffect(()=>{
     AOS.init({duration:2000});

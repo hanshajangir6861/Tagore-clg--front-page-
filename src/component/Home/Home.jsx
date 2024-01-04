@@ -15,6 +15,7 @@ import bca from '../Image/bca.jpeg'
 import Bba from '../Image/bba.jpg'
 import Bcom from '../Image/bcom.jpg'
 import '../Home/Home.css'
+import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
@@ -108,7 +109,7 @@ useEffect(()=>{
                 <Card.Title>Principle</Card.Title>
                 <Card.Text>
                   <h3>Dr.Surender Soni</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores incidunt voluptatibus sit, quaerat nisi!</p>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores incidunt voluptatibus sit.</p>
                 </Card.Text>
 
               </Card.Body>
@@ -369,6 +370,8 @@ useEffect(()=>{
 
     </div>
   </Container>
+
+
     </>
 
   )

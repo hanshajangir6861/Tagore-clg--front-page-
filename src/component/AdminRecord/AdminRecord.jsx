@@ -3,15 +3,19 @@ import '../AdminRecord/AdminRecord.css'
 import Container from 'react-bootstrap/Container';
 import Student from '../Image/cap.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState ,useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import axios from 'axios';
+import { context } from '../../App';
+
+
 
 function AdminRecord() {
+    const serverLink = useContext(context)
     const [Firstname, setFirstname] = useState()
     const [Lastname, setLastname] = useState()
     const [Dob, setDob] = useState()
@@ -62,7 +66,7 @@ function AdminRecord() {
         formData.append("Time", Time);
 
 
-        let result = await axios.post("http://localhost:8000/EmployeeRecord/EmployeeRecordadd", formData,{
+        let result = await axios.post(`${serverLink}/EmployeeRecord/EmployeeRecordadd`, formData,{
             headers:{
                 'Content-Type' : 'multipart/form-data'
             }
@@ -202,11 +206,6 @@ function AdminRecord() {
                                     onChange={(e) => setSubject(e.target.value)}
                                 />
                             </Form.Group>
-
-
-
-
-
 
                             <Form.Group as={Col} md="4" >
                                 <Form.Label className='emplo'> Photo</Form.Label>
