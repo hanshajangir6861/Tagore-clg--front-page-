@@ -15,58 +15,44 @@ function Footer() {
  
   return (
     <div className="main-footer">
-<Container>
-      <Row className='rows' >
-        
-
-        <Col className='cols' lg={4}>
-        <div className='clgnamefooter'>
-        <h2>Tagore P.G College</h2>
-        </div>
-         
-       
+    <Container>
+          <Row className='rows' >
+            
+    
+            <Col className='cols' lg={4}  >
+              <h2>Tagore P.G College</h2>
+    
+              <p>Tagore PG College Gudha Gorji, <br />Jhunjhunu is a very popular college  <br />in the state of Rajasthan.It is one of  the <br /> leading colleges  in Arts,Humanities and <br /> Social Scieces,etc.</p>
+              
+    
+            </Col>
+           
+            <Col className='cols' lg={4}>
+             <h2>Contact Us</h2>
+             <p>Tagore PG College Gudha Gorji-333022,Jhunjhunu,Rajasthan</p>
+             <p> <a href="tel:+91543212345">+91123454321</a></p>
+             <p> <a href="tel:+91123454321">+91123454321</a></p>
+             <p><a href="mailto:tagore@gmail.com">tagore@gmail.com</a></p>
+            
+    
+            </Col>
+            <Col className='cols' lg={4}>
+             <h2>Social media</h2>
+             <p> <EmailIcon/><a href="mailto:tagore@gmail.com">tagore@gmail.com</a></p>
+             <p> <WhatsAppIcon/>
+             <a href={`https://wa.me/+911234567890?text=${encodeURIComponent("Hello Sir")}`}>WhatsApp</a></p>
+             <p><FacebookIcon/><a href="https://connect.facebook.net?Tagore PG College of Gudha,Jhunjhunu=${encodeURIComponent(Hii)}/">Facebook</a></p>
+             <p><InstagramIcon/><a href="https://www.instagram.com/tagoregudha?=${encodeURIComponent(Hii)}/">Instagram</a></p>
+             <p> <YouTubeIcon/><a href="https://www.youtube.com/@TagoreGudha" target="_blank">
+            YouTube
+        </a></p>
+           
+            </Col>
+            
+          </Row>
           
-
-          <p>Tagore PG College Gudha Gorji, <br />Jhunjhunu is a very popular college  <br />in the state of Rajasthan.It is one of  the <br /> leading colleges  in Arts,Humanities and <br /> Social Scieces,etc.</p>
-          
-
-        </Col>
-       
-        <Col className='cols' lg={4}>
-          <div className='contactusname'>
-          <h2>Contact Us</h2>
-          </div>
-         
-         <p>Tagore PG College Gudha Gorji-333022,Jhunjhunu,Rajasthan</p>
-         <p>+919460066518</p>
-         <p>+917597607102</p>
-         <p>tagore@gmail.com</p>
-        
-
-        </Col>
-        <Col className='cols' lg={4}>
-          <div className='socialname'>
-          <h2>Social media</h2>
-          </div>
-        <div className='socialmedia'>
-        <p> <EmailIcon/><a href="mailto:tagore@gmail.com">tagore@gmail.com</a></p>
-         <p> <WhatsAppIcon/>
-         <a href={`https://wa.me/+911234567890?text=${encodeURIComponent("Hello Sir")}`}>WhatsApp</a></p>
-         <p><FacebookIcon/><a href="https://connect.facebook.net?=${encodeURIComponent(hii)}/">Facebook</a></p>
-         <p><InstagramIcon/><a href="https://www.instagram.com/tagorecollage?=${encodeURIComponent(hii)}/">Instagram</a></p>
-         <p> <YouTubeIcon/><a href="https://www.Youtube.com/?">Youtube</a></p>
-        </div>
-         
-       
-
-        
-
-        </Col>
-        
-      </Row>
-      
-    </Container>
-</div>
+        </Container>
+    </div>
   )
 }
 

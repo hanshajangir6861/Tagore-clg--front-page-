@@ -6,6 +6,8 @@
     /* background-color: blueviolet; */
 }
 
+
+
 .heder {
     text-align: center;
     background-image:linear-gradient(rgba(0, 0, 0, 0.628) , rgba(0, 0, 0, 0.643) , rgba(0, 0, 0, 0.635)), url(../Image/Staff.jpg);
@@ -37,10 +39,15 @@ textarea.form-control {
     height: 60vh;
 }
 
-.but {
-    background-color: blue;
-    border-radius: 20px;
-    border: none;
-    margin-bottom: 5px;
-    padding: 4px 20px;
+@media (max-width:1192px) {
+    textarea.form-control
+{
+    height: 45vh;
+}
+}
+@media (max-width:469px) {
+    textarea.form-control
+{
+    height: 40vh;
+}
 }

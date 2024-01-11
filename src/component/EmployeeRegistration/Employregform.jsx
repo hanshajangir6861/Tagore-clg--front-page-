@@ -2,10 +2,8 @@ import { useState ,useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cap from '../Image/cap.png'
 import '../EmployeeRegistration/Employregform.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -13,7 +11,7 @@ import { context } from '../../App';
 
 
 function FormExample() {
-    const serverLink = useContext(context)
+    const {serverLink} = useContext(context)
     const navigate = useNavigate();
     const [validated, setValidated] = useState(false);
     const [firstName, setFirstname] = useState('');
@@ -30,23 +28,23 @@ function FormExample() {
     
 
     const AdminRegister = async () => {
-       
-        let result = await axios.post(`${serverLink}/admindata/Register`, {
-            FirstName: firstName,
-            LastName: lastName,
-            UserName: userName,
-            FatherName: fathersName,
-            PhoneNo: phoneNo,
-            Email: email,
-            Password: password
-
-        })
-        result = result.data
         if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
             alert("please fill in all the fields")
             return;
         }
         else{
+            // console.log(`${serverLink}/admindata/Register`);
+            let result = await axios.post(`${serverLink}/admindata/Register`, {
+                FirstName: firstName,
+                LastName: lastName,
+                UserName: userName,
+                FatherName: fathersName,
+                PhoneNo: phoneNo,
+                Email: email,
+                Password: password
+    
+            })
+            result = result.data
             alert("Successfull Registration")
             navigate("/adminlog")
         }

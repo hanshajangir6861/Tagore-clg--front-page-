@@ -46,13 +46,6 @@ background-color: white !important;
 }
 /* ............wapper-sec.......... */
 
-.wapper-sec .bg-body-tertiary
-{
-    background-color: rgb(32 13 105) !important;
-    height: auto;
-    padding: 20px;
-}
-
 .wapper-sec .style {
     border: 2px solid white;
     background-color: white;
@@ -74,11 +67,11 @@ background-color: white !important;
     width: 100%;
     background:linear-gradient(rgba(0, 0, 0, 0.637) , rgba(0, 0, 0, 0.61) ,rgba(0, 0, 0, 0.541)), url("../Image/Staff.jpg");
     background-repeat: no-repeat;
-    background-size:cover;}
-    .second-navbar .bg-body-tertiary
-{
-background-color: white !important;
+    background-size:cover;
+}
 
+.second-navbar .bg-body-tertiary{
+background-color: white !important;
 }
 
 .second-navbar .ms-auto button

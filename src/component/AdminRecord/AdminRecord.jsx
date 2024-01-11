@@ -15,7 +15,7 @@ import { context } from '../../App';
 
 
 function AdminRecord() {
-    const serverLink = useContext(context)
+    const {serverLink} = useContext(context)
     const [Firstname, setFirstname] = useState()
     const [Lastname, setLastname] = useState()
     const [Dob, setDob] = useState()
@@ -97,18 +97,6 @@ function AdminRecord() {
 
     return (
         <>
-            <div className='container'>
-                <div className="hadder">
-                    <div className='logo'><img src={Student} alt="" /></div>
-                    <div className='decription'>
-                        <h4>Tagore P.G College </h4>
-                        <h6>Gudha Gorji, juhunjhunu, rajasthan</h6>
-
-                        <h6>983-3989-282</h6>
-
-                    </div>
-                </div>
-            </div>
             <div className="student-form">
                 <h2>EMPLOYEE FORM</h2>
                 <Container>

@@ -1,23 +1,18 @@
 import React from 'react'
 import '../StudentRecord/StudentRecord.css'
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Student from '../Image/cap.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState , useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import axios from 'axios';
 import { context } from '../../App';
 
 
 function StudentRecord() {
-    const serverLink = useContext(context)
+    const {serverLink} = useContext(context)
     const [Firstname, setFirstname] = useState()
     const [Lastname, setLastname] = useState()
     const [Dob, setDob] = useState()
@@ -60,7 +55,7 @@ function StudentRecord() {
         formData.append("PinCode", PinCode);
 
 
-    let result = await axios.post("http://localhost:8000/StdRecord/StudentRecordadd", formData,{
+    let result = await axios.post(`${serverLink}/StdRecord/StudentRecordadd`, formData,{
         headers:{
             'Content-Type' : 'multipart/form-data'
         }

@@ -5,7 +5,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+.eyeicon1 svg {
+    margin-top: -67px;
+    margin-left: 612px;
+}
 .container.hadder{
     display: flex;
     justify-content: space-between;

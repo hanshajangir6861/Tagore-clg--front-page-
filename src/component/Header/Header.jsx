@@ -1,126 +1,229 @@
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
 import '../Header/header.css'
-
 import Logo from '../Image/logo.jpeg'
-
-
-
-
-import { useState, useEffect } from 'react';
-import InputGroup from 'react-bootstrap/InputGroup';
+import { useState, useEffect, useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 import EmailIcon from '@mui/icons-material/Email';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
-
 import { Link } from 'react-router-dom';
+import { context } from '../../App';
+
+
 
 function Header() {
+  const { serverLink } = useContext(context)
+
+  const adminId = location.pathname.split("/")[2]
+  const [adminName, setadminName] = useState('')
+
+  const studentId = location.pathname.split("/")[2]
+  const [studentName, setstudentName] = useState('')
+
+  const { isAdminLoggedIn, setAdminLoggedIn, isStudentLoggedIn, setStudentLoggedIn } = useContext(context);
   const [show, setShow] = useState(false);
 
 
-  // change navbar on scroll//
-  // const [isSticky , setIsSticky] =useState(false)
+  // console.log(localStorage.getItem("adminData"));
+  // console.log("isAdminLoggedIn: " + isAdminLoggedIn)
+  // console.log("isStudentLoggedIn: " + isStudentLoggedIn)
 
 
+  useEffect(() => {
+    showAdminName()
+  }, [])
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const offset = window.scrollY;
+  useEffect(() => {
+    showStudentName()
+  }, [])
 
-  //     // Adjust the value (e.g., 100) based on when you want the navbar to stick
-  //     setIsSticky(offset > 60);
-  //   };
+  const showAdminName = async () => {
+    let result = await axios.get(`${serverLink}/admindata/AdminsLogin/${adminId}`)
+    result = result.data
+    setadminName(result)
+  }
+  // console.log(adminName, isAdminLoggedIn)
 
-  //   // Attach the event listener when the component mounts
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Detach the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
-
-
-
-
+  const showStudentName = async () => {
+    let result = await axios.get(`${serverLink}/data/login/${studentId}`)
+    result = result.data
+    setstudentName(result)
+  }
 
   return (
     <>
+      {
+        isAdminLoggedIn && (
+          <>
+            <div className='second-navbar'>
+              <Navbar expand="lg" className="bg-body-tertiary">
+                <Container>
+
+                  <div className="name">
+                    <div className="hin">
+                      <h1>Hii!!!</h1>
+                    </div>
+                    <div className="eng">
+                      {/* <h3>{adminName.UserName}</h3> */}
+                      <h3>{JSON.parse(localStorage.getItem("adminData")).UserName}</h3>
+                    </div>
+                  </div>
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                      <button className='logout' onClick={() => { localStorage.clear(); setAdminLoggedIn(false); }}>
+                        <Link to="/">Logout</Link>
+                      </button>
+
+
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+            </div>
+
+            {/* ...................second-navbar................................ */}
+            <div className="wapper-sec">
+              <Navbar expand="lg" className="bg-body-tertiary">
+                <Container>
+                  {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="m-auto">
+                      <Nav.Link href="#home"><Link to='/AdminRecord'>Add-Self-Record</Link></Nav.Link>
+                      <Nav.Link href="#link"><Link to='/Notice'>Send Notice</Link></Nav.Link>
+                      <Nav.Link href="#link"><Link to='/ReceiveComplaint'>Complain-Corner</Link></Nav.Link>
+                      <Nav.Link href="#link"><Link to='/StdDetails'>Add StudentRecord</Link></Nav.Link>
+                      <Nav.Link href="#link"><Link to='/AllStdRecord'>Students Details</Link></Nav.Link>
+
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+
+            </div>
+          </>
+        )
+      }
+
+      {
+        isStudentLoggedIn && (
+          <>
+            <div className='second-navbar'>
+              <Navbar expand="lg" className="bg-body-tertiary">
+                <Container>
+
+                  <div className="name">
+                    <div className="hin">
+                      <h1>Hii!!!</h1>
+                    </div>
+                    <div className="eng">
+                      <h3>{JSON.parse(localStorage.getItem("userData")).Username}</h3>
+                    </div>
+                  </div>
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                      <button className='logout'>  <Link to="/" id="log" onClick={() => { localStorage.clear(); setStudentLoggedIn(false) }}>Logout</Link></button>
+
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+            </div>
+
+
+
+            {/* ...................second-navbar................................ */}
+
+
+
+            <div className="wapper-sec">
+              <Navbar expand="lg" className="bg-body-tertiary">
+                <Container>
+                  {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="m-auto">
+                      <Nav.Link href="#home"><Link to='/stdRecord'>Personal-info</Link></Nav.Link>
+                      <Nav.Link href="#link">Attendance</Nav.Link>
+                      <Nav.Link href="#link">Marks</Nav.Link>
+                      <Nav.Link href="#link"><Link to='/ComBox'>Complaint-box</Link></Nav.Link>
+                      <Nav.Link href="#link"><Link to='/ReceiveNotice'>Notice</Link></Nav.Link>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+
+            </div>
+          </>
+        )}
+
+      {!isAdminLoggedIn && !isStudentLoggedIn && (
+          <>
      
-      <div className="mainnav">
-        <div className="wapper sticky-navbar">
-          <Navbar expand="lg" className="bg-body-tertiary">
-            <Container>
-              <Navbar.Brand href="#home"><img src={Logo} alt="" /></Navbar.Brand>
-              <div className="name">
-                <div className="hin">
-                  <h3>टैगोर पी.जी महाविद्यालय,गुढ़ा गोरजी</h3>
-                </div>
-                <div className="eng">
-                  <h3>Tagore P.G College,Gudha Gorji</h3>
-                </div>
-              </div>
-
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ms-auto">
-                  <span> <EmailIcon color='dark' /> <a href="">tagore@gmail.com</a> </span>
-                  <span> <AddIcCallIcon /> <a href="">0988776665</a></span>
-                  <button><Link to='/adminlog'>Login</Link></button>
-                </Nav>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-        </div>
-
-      </div>
-
-            
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto">
-             {/* <span> <EmailIcon color='dark'/><a href="mailto:tagorecollege@gmail.com">tagorecollege@gmail.com</a></span> */}
-             <span><EmailIcon color='dark' /><a href="mailto:tagore@gmail.com">tagore@gmail.com</a></span>
-
-                <span> <AddIcCallIcon/> <a href="">+91-1234567890</a></span>
-                <button><Link to='/adminlog'>Login</Link></button>
-              </Nav>
-            </Navbar.Collapse>
-          
-       
-
-      {/* ...............< Second-navbar >.................. */}
-
-
-      <div className="wapper-sec ">
-        <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
-            {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="m-auto">
-                <Nav.Link href="#link"><Link to='/home'>Home</Link></Nav.Link>
-                <Nav.Link href="#link"><Link to='/about'>About</Link> </Nav.Link>
-                <Nav.Link href="#link"><Link to='/contactus'>Contact</Link></Nav.Link>
-                <Nav.Link href="#link"><Link to='/mediagallery'>Media</Link></Nav.Link>
-                <Nav.Link href="#link"> <Link to='/stdlogin'> Student Login</Link></Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
-
+          <div className="mainnav">
+            <div className="wapper sticky-navbar">
+              <Navbar expand="lg" className="bg-body-tertiary">
+                <Container>
+                  <Navbar.Brand href="#home"><img src={Logo} alt="" /></Navbar.Brand>
+                  <div className="name">
+                    <div className="hin">
+                      <h3>टैगोर पी.जी महाविद्यालय,गुढ़ा गोरजी</h3>
+                    </div>
+                    <div className="eng">
+                      <h3>Tagore P.G College,Gudha Gorji</h3>
+                    </div>
+                  </div>
+    
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                      <span> <EmailIcon color='dark' /> <a href="mailto:tagore@gmail.com">tagore@gmail.com</a> </span>
+                      <span> <AddIcCallIcon /><a href="tel:+91123454321">+911234567890</a></span>
+                      <button><Link to='/adminlog'>Login</Link></button>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+            </div>
+    
+          </div>
+    
+                
+             
+    
+          {/* ...............< Second-navbar >.................. */}
+    
+    
+          <div className="wapper-sec ">
+            <Navbar expand="lg" className="bg-body-tertiary">
+              <Container>
+                {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="m-auto">
+                    <Nav.Link href="#link"><Link to='/home'>Home</Link></Nav.Link>
+                    <Nav.Link href="#link"><Link to='/about'>About</Link> </Nav.Link>
+                    <Nav.Link href="#link"><Link to='/mediagallery'>Media</Link></Nav.Link>
+                    <Nav.Link href="#link"><Link to='/contactus'>Contact</Link></Nav.Link>
+                    <Nav.Link href="#link"> <Link to='/stdlogin'> Student Login</Link></Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Container>
+            </Navbar>
+          </div>
+    
+        </>
+    
+      )}
     </>
   );
 }
 
-export default Header;
+export default Header;
 
 
 

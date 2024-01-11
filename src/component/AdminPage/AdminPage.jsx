@@ -16,51 +16,8 @@ import '../AdminPage/AdminPage.css'
 function Admin() {
   return (
     <>
-      <div className='second-navbar'>
-        <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
-
-            <div className="name">
-              <div className="hin">
-                <h1>Hii!!!</h1>
-              </div>
-              <div className="eng">
-                <h3>Name of Employee</h3>
-              </div>
-            </div>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto">
-                <button className='logout'>  <Link to="/" id="log" onClick={() => { localStorage.clear() }}>Logout</Link></button>
-
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
-
-      {/* ...................second-navbar................................ */}
-      <div className="wapper-sec">
-        <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
-            {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="m-auto">
-                <Nav.Link href="#home"><Link to='/AdminRecord'>Admin-Record</Link></Nav.Link>
-                <Nav.Link href="#link"><Link to='/'>Complain-Corner</Link></Nav.Link>
-                <Nav.Link href="#link"><Link to='/StdDetails'>Attendence/Marks</Link></Nav.Link>
-                <Nav.Link href="#link"><Link to='/Notice'>Notice</Link></Nav.Link>
-                <Nav.Link href="#link"><Link to='/AllStdRecord'>All-Student-Record</Link></Nav.Link>
-
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
-      <div className='background'>
-
-      </div>
+    
+    <div className='background'></div>
     </>
 
   )

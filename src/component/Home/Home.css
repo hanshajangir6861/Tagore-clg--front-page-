@@ -190,3 +190,288 @@ margin: auto;
 .mapbox {
     margin-top: 20px;
 }
+@media(max-width:1500px)  {
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 25%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 25%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 25%;
+    margin: auto;
+
+}
+   
+}
+@media(max-width:700)  {
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 40%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 40%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 40%;
+    margin: auto;
+
+}
+   
+}
+@media(max-width:690)  {
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 40%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 40%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 40%;
+    margin: auto;
+
+}
+   
+}
+@media (max-width:995px){
+    .cols.col-lg-6.aos-init.aos-animate {
+        margin-top: 20px;
+    }
+
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 32%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 32%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 32%;
+    margin: auto;
+
+}
+
+.cols.col-lg-4{
+    margin-top: 20px;
+}
+.cols.col-lg-6 {
+    margin-top: 20px;
+}
+}
+@media(max-width:1500px)  {
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 25%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 25%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 25%;
+    margin: auto;
+
+}
+   
+}
+@media(max-width:700)  {
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 40%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 40%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 40%;
+    margin: auto;
+
+}
+   
+}
+@media(max-width:690)  {
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 40%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 40%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 40%;
+    margin: auto;
+
+}
+   
+}
+@media (max-width:995px){
+    .cols.col-lg-6.aos-init.aos-animate {
+        margin-top: 20px;
+    }
+
+    .about-college h2 {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: black;
+        border-bottom: 3px solid black;
+        width: 32%;
+        margin: auto;
+    }  
+    .our-faci h2
+{
+    
+text-align: center;
+padding-top: 30px;
+padding-bottom: 10px;
+border-bottom: 3px solid black;
+width: 32%;
+margin: auto;
+
+}
+.our-cour h2
+{
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    width: 32%;
+    margin: auto;
+
+}
+
+.cols.col-lg-4{
+    margin-top: 20px;
+}
+.cols.col-lg-6 {
+    margin-top: 20px;
+}
+}
+

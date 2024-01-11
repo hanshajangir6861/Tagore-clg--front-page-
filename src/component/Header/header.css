@@ -1,27 +1,27 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 
 
-.wapper .ms-auto
+/* .wapper .ms-auto
 {
     gap: 20px;
     /* font-size: 20px; */
-    color: #b71109;
-}
-.wapper .bg-body-tertiary
+    /* color: #b71109; */
+
+/* .wapper .bg-body-tertiary
 {
 background-color: white !important;
 height: 140px;
-}
+} */
 
-.wapper .ms-auto button
+/* .wapper .ms-auto button
 {
     height: 35px;
     width: 90px;
@@ -30,15 +30,15 @@ height: 140px;
     text-align: center;
     color: #fff;
     border: 0;   
-}
+} */
 
-.wapper .ms-auto  a {
-    color: #b71109;
-    text-decoration: none;
+/* .wapper .ms-auto  a { */
+    /* color: #b71109; */
+    /* text-decoration: none; */
     /* font-size: 15px; */
-}
+/* } */
 
-.wapper .ms-auto button a{
+/* .wapper .ms-auto button a{
     color: white;
 }
 
@@ -46,19 +46,19 @@ height: 140px;
 {
     color: #b71109;
     /* font-size: 25px; */
-}
+/* } */
 
-.bg-body-tertiary a img {
+/* .bg-body-tertiary a img {
     height: 135px;
-}
+} */
 /* ............wapper-sec.......... */
 
-.wapper-sec .bg-body-tertiary
+/* .wapper-sec .bg-body-tertiary
 {
     background-color: rgb(32 13 105) !important;
     height: auto;
     padding: 20px;
-}
+}  */
 
 
 /* .wapper-sec .me-auto
@@ -72,7 +72,7 @@ height: 140px;
     justify-content: center !important;
 } */
 
-
+/* 
 .wapper-sec .style {
     border: 0;
     background-color: white;
@@ -100,4 +100,335 @@ height: 140px;
 .wapper-sec .m-auto a {
     color: black;
     text-decoration: none;
+}
+
+.wapper .ms-auto
+{
+    gap: 20px;
+    font-size: 20px;
+    color: #b71109;
+}
+.wapper .bg-body-tertiary
+{
+background-color: white !important;
+
+}
+
+.wapper .ms-auto button
+{
+    height: 35px;
+    width: 90px;
+    border-radius: 20px;
+    background-color: rgb(216, 18, 18);
+    text-align: center;
+    color: #fff;
+    border: 0;
+  
+    
+}
+.ms-auto  a {
+    color: #b71109;
+    text-decoration: none;
+}
+
+
+.wapper .name h3
+{
+    color: #b71109;
+}
+
+.bg-body-tertiary a img {
+    height: 135px;
+} */
+/* ............wapper-sec.......... */
+
+/* .wapper-sec .bg-body-tertiary
+{
+    background-color: rgb(32 13 105) !important;
+    height: auto;
+    padding: 20px;
+}
+
+
+
+.wapper{
+    height: auto;
+}
+.wapper .ms-auto
+{
+    gap: 20px;
+    font-size: 20px;
+    color: #b71109;
+}
+.wapper .bg-body-tertiary
+{
+background-color: white !important;
+
+}
+
+.wapper .ms-auto button
+{
+    height: 35px;
+    width: 90px;
+    border-radius: 20px;
+    background-color:blue !important;
+    text-align: center;
+    color: #fff;
+    border: 0;
+  
+    
+}
+.wapper .ms-auto  a {
+    color: #b71109;
+    text-decoration: none;
+    font-size: 18px;
+}
+.wapper .ms-auto button a{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+.wapper .name h3
+{
+    color: #b71109;
+    font-size: 25px;
+}
+.bg-body-tertiary a img {
+    height: 80px  !important;
+  } */
+/* ............wapper-sec..........  */
+
+/* .wapper-sec .bg-body-tertiary
+{
+    background-color: rgb(32 13 105) !important;
+    height: auto;
+    padding: 2px !important;
+    text-align: center;
+}
+
+
+
+.wapper-sec .style {
+    border: 2px solid white;
+    background-color: white;
+}
+.wapper-sec .container
+{
+    display: flex !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important; 
+} 
+
+.wapper-sec .nav-link {
+    height: 40px;
+    width: 140px;
+    border: 2px solid gray;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.wapper-sec .m-auto a {
+    color: black;
+    text-decoration: none;
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+      /* padding-right: var(--bs-navbar-nav-link-padding-x);
+      padding-left: var(--bs-navbar-nav-link-padding-x); */
+      /* width: 185px; */
+    /* }} */
+/* @media (max-width:995px){
+    
+   .wapper-sec button.navbar-toggler.collapsed {
+    color: white !important;
+    background-color: white;
+}
+.wapper-sec a.nav-link {
+    margin-top: 10px;
+}
+.wapper-sec button.navbar-toggler {
+    background-color: white;
+}
+.wapper svg.MuiSvgIcon-root.MuiSvgIcon-colorDark.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    margin-top: 10px;
+}
+}  */
+  
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.wapper .ms-auto
+{
+    gap: 20px;
+    font-size: 20px;
+    color: #b71109;
+}
+.wapper .bg-body-tertiary
+{
+background-color: white !important;
+
+}
+
+.wapper .ms-auto button
+{
+    padding: 0px 17px;
+    border-radius: 20px;
+    background-color:blue !important;
+    text-align: center;
+    color: #fff;
+    border: 0;
+  
+    
+}
+.ms-auto  a {
+    color: #b71109;
+    text-decoration: none;
+    font-size: 13px;
+}
+.ms-auto button a{
+    color: white;
+}
+
+
+.wapper .name h3
+{
+    color: #b71109;
+    font-size: 17px;
+}
+.bg-body-tertiary a img {
+    height: 71px  !important;
+  }
+/* ............wapper-sec.......... */
+
+.wapper-sec .bg-body-tertiary
+{
+    background-color: rgb(32 13 105) !important;
+    /* height: auto; */
+    padding: 2px !important;
+    text-align: center;
+}
+
+
+/* .navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: var(--bs-navbar-color);
+    background-color: #e3d6d6;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+  } */
+/* .wapper-sec .me-auto
+{
+    display: flex !important;
+    justify-content: center !important;
+} 
+ .wapper-sec #basic-navbar-nav
+{
+    display: flex !important;
+    justify-content: center !important;
+} */
+
+
+
+.wapper-sec .style {
+    border: 2px solid white;
+    background-color: white;
+}
+
+
+
+.wapper-sec .container
+{
+    display: flex !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important; 
+} 
+
+.wapper-sec .nav-link {
+    height: 40px;
+    width: 140px;
+    border: 2px solid gray;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.wapper-sec .m-auto a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ............<slider>.................. */
+
+
+
+/* ............<slider>.................. */
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: var(--bs-navbar-nav-link-padding-x);
+      padding-left: var(--bs-navbar-nav-link-padding-x);
+      width: 185px;
+    }}
+
+
+
+
+.main-footer
+{
+    height: auto;
+    padding: 20px 0px;
+    width: 100%;
+    background-color: rgb(22 9 71);
+    color: #fff;
+}
+.main-footer .rows
+{
+    text-align: center;
+    color: #fff;
+
+}
+.main-footer .cols p {
+  
+    text-align: left;
+}
+
+.wapper-sec button.navbar-toggler {
+    background-color: white;
+}
+.wapper svg.MuiSvgIcon-root.MuiSvgIcon-colorDark.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    margin-top: 10px;
+}
+
+
+@media (max-width:995px){
+    .wapper-sec .m-auto a{
+        margin-top: 15px;
+        color: var(--bs-navbar-color);
+        background-color: #fff;
+    }
 }

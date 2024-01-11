@@ -1,3 +1,64 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+/* .................footer.................. */
+
+/* .main-footer
+{
+    height: auto;
+    padding: 20px 0px;
+    width: 100%;
+    background-color: rgb(22 9 71);
+    color: #fff;
+}
+.main-footer .rows
+{
+    text-align: center;
+    color: #fff;
+
+}
+.main-footer .cols p {
+    /* padding: 0px 170px; */
+    /* text-align: left; */
+/* } */
+/* .main-footer .cols h2{ */
+    /* padding: 0px 170px; */
+    /* font-size: 20px;  */
+    /* text-align: left; */
+    /* text-decoration: underline 2px solid yellow; */
+    
+/* } */
+/* .clgnamefooter h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 47%;
+
+}
+.contactusname h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 30%;
+}
+.socialname h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 35%;
+}
+.clgnamefooter h2{
+    padding-bottom: 7px;
+    border-bottom: 3px solid yellow;
+    width: 47%;
+}
+.socialmedia a {
+    color: white;
+    text-decoration: none;
+} */ 
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
@@ -27,34 +88,15 @@
     text-align: left;
 }
 .main-footer .cols h2{
-    /* padding: 0px 170px; */
+    padding: 0px 17px;
     font-size: 20px; 
     text-align: left;
-    /* text-decoration: underline 2px solid yellow; */
-    
-}
-.clgnamefooter h2{
-    padding-bottom: 7px;
-    border-bottom: 3px solid yellow;
-    width: 47%;
+    text-decoration: underline 2px solid yellow;
+    /* border-bottom: 2px solid yellow; */
+    /* width: 35%; */
 
 }
-.contactusname h2{
-    padding-bottom: 7px;
-    border-bottom: 3px solid yellow;
-    width: 30%;
-}
-.socialname h2{
-    padding-bottom: 7px;
-    border-bottom: 3px solid yellow;
-    width: 35%;
-}
-.clgnamefooter h2{
-    padding-bottom: 7px;
-    border-bottom: 3px solid yellow;
-    width: 47%;
-}
-.socialmedia a {
+.main-footer .cols a{
     color: white;
     text-decoration: none;
 }

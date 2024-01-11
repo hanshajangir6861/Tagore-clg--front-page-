@@ -1,7 +1,6 @@
-import React, { useState, useEffect ,useContext} from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import '../AllStdRecord/AllStdRecord.css'
 import { Container, Row, Col } from 'react-bootstrap'
@@ -13,7 +12,7 @@ import { context } from '../../App';
 
 
 function AllStdRecord() {
-    const serverLink = useContext(context)
+    const{ serverLink} = useContext(context)
     const [AllStudents, setAllStudents] = useState([])
     const [SelectedClass, setSelectedClass] = useState()
 
@@ -22,17 +21,24 @@ function AllStdRecord() {
     }, [])
 
     const AllData = async () => {
-        let result = await axios.get(`${serverLink}/StdRecord/ShowStudentRecord`)
-        result = result.data
-        setAllStudents(result)
+        try {
+            let result = await axios.get(`${serverLink}/StdRecord/ShowStudentRecord/`)
+            result = result.data
+            // result = JSON.parse(result)
+            // console.log(result);
+            setAllStudents(result)
+        } catch (error) {
+            console.log(error);
 
+        }
     }
 
     const handleChange = (e) => {
         setSelectedClass(e.target.value)
     };
-    const filteredStudents = SelectedClass ? AllStudents.filter((student) => student.Course === SelectedClass)
-        : AllStudents;
+    const filteredStudents =
+        SelectedClass? AllStudents?.filter((student) => student.Course === SelectedClass ? student : null)
+            : AllStudents;
 
 
 
@@ -46,7 +52,7 @@ function AllStdRecord() {
                         <Col className='cols' lg={8}>
                             <Form.Group md="4" >
                                 <Form.Label>Select Class</Form.Label>
-                                <Form.Select  aria-label="Default select example" onChange={handleChange}>
+                                <Form.Select aria-label="Default select example" onChange={handleChange}>
                                     <option >Course</option>
                                     <option value="B.A-1st">B.A-1st</option>
                                     <option value="B.A-2nd">B.A-2nd</option>
@@ -93,7 +99,7 @@ function AllStdRecord() {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {filteredStudents.map((student ,index) => (
+                                                {filteredStudents.map((student, index) => (
                                                     <tr key={student._id}>
                                                         <td>{index + 1}</td>
                                                         <td>{student.Firstname}</td>
@@ -113,7 +119,7 @@ function AllStdRecord() {
                                 ) : (
                                     <p className='noData'>Please select a class</p>
                                 )}
-    
+
                             </Form.Group>
                         </Col>
                         <Col className='cols' lg={2}></Col>

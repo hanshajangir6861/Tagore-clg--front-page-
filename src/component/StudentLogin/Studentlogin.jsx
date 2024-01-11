@@ -2,23 +2,24 @@ import { useState ,useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cap from '../Image/cap.png'
 import '../StudentLogin/Studentlogin.css'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { context } from '../../App';
+import {EyeInvisibleOutlined , EyeOutlined} from "@ant-design/icons"
 
 
 function FormExample() {
-    const serverLink = useContext(context)
-    const navigater = useNavigate()
+    const { serverLink , setStudentLoggedIn} = useContext(context);
+    const navigate = useNavigate()
     const [validated, setValidated] = useState(false);
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
+    const [visible , setVisible] = useState(false)
+    const [agreeTerms, setAgreeTerms] = useState(false);
 
     const StudentLogin = async () => {
         let result = await axios.post(`${serverLink}/data/login`, {
@@ -26,10 +27,20 @@ function FormExample() {
             Password: password,
         })
         result = result.data
-        console.log(result.data)
+        // console.log(result.data)
         if (result.Username) {
            alert("Successfull login")
-           navigater('/stdPage')
+
+           const setUserData = () =>{
+            localStorage.setItem("userData",JSON.stringify(result))
+           }
+            // console.log(localStorage.getItem("userData"));
+      
+           setUserData()
+           setStudentLoggedIn(true)
+
+           navigate(`/AdminPage/${result._id}`)
+           navigate('/stdPage')
 
           }
           else {
@@ -80,11 +91,15 @@ function FormExample() {
                         <Row className="mb-3">
                             <Form.Group as={Col} md="7" controlId="validationCustom05">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Enter your Password" 
+                                <Form.Control type={visible ? "text" : "password"}
+                                 placeholder="Enter your Password" 
                                 value={password}
                                 onChange={(e)=> setPassword(e.target.value)}
-                                
+                               
                                 required />
+                                 <div className="eyeicon" onClick={()=>{setVisible(!visible)}}>
+                                {visible ? <EyeOutlined/>:<EyeInvisibleOutlined/> }
+                              </div>
                                 <Form.Control.Feedback type="invalid">
 
                                 </Form.Control.Feedback>
@@ -97,6 +112,8 @@ function FormExample() {
               <Form.Check
                 required
                 label="Agree to terms and conditions"
+                checked={agreeTerms}
+                 onChange={() => setAgreeTerms(!agreeTerms)}
                 feedback="You must agree before submitting."
                 feedbackType="invalid"
               />
@@ -105,8 +122,14 @@ function FormExample() {
                         <Button type="submit" 
                          onClick={(e) => {
                             e.preventDefault();
-                            StudentLogin();
+                            if (agreeTerms) {
+                                StudentLogin();
+
+                            } else {
+                                alert("Please agree to terms and conditions.");
+                            }
                         }}
+                        disabled={!agreeTerms}
                         >Submit</Button>
                     </div>
                 </Form>

@@ -2,10 +2,8 @@ import { useState ,useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cap from '../Image/cap.png'
 import '../StudentRegistration/Regform.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -14,40 +12,43 @@ import { context } from '../../App';
 
 
 function FormExample() {
-    const serverLink = useContext(context)
+    const {serverLink} = useContext(context)
     const navigate = useNavigate()
     const [validated, setValidated] = useState(false);
-    const [firstName, setFirstname] = useState();
-    const [lastName, setLastname] = useState();
-    const [userName, setUsername] = useState();
-    const [fathersName, setFathername] = useState();
-    const [mothersName, setMothername] = useState();
-    const [phoneNo, setPhoneNo] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [firstName, setFirstname] = useState('');
+    const [lastName, setLastname] = useState('');
+    const [userName, setUsername] = useState('');
+    const [fathersName, setFathername] = useState('');
+    const [mothersName, setMothername] = useState('');
+    const [phoneNo, setPhoneNo] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [emailCheck , setemailCheck] = useState('')
 
 
     const StudentRegister = async () => {
-        let result = await axios.post(`${serverLink}/data/Register`, {
-            Firstname: firstName,
-            Lastname: lastName,
-            Username: userName,
-            Fathername: fathersName,
-            Phoneno: phoneNo,
-            Email: email,
-            Password: password
-
-        })
-        result = result.data
         if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
             alert("please fill in all the fields")
             return;
         }
         else{
+            let result = await axios.post(`${serverLink}/data/Register`, {
+                Firstname: firstName,
+                Lastname: lastName,
+                Username: userName,
+                Fathername: fathersName,
+                Phoneno: phoneNo,
+                Email: email,
+                Password: password
+    
+            })
+            result = result.data
             alert("Successfull Registration")
-            navigate("/adminlog")
+            navigate("/stdlogin")
         }
+     
     }
+ 
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -55,20 +56,16 @@ function FormExample() {
             event.preventDefault();
             event.stopPropagation();
         }
-
         setValidated(true);
     };
 
     return (
         <>
-
-            <div className='container'>
-                
+            <div className='container'>  
                 <div className="hadding">
                     <h1>COLLEGE REGISTRATION FORM</h1>
                     <h6>Enter your registration information below</h6>
                 </div>
-
             </div>
 
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -94,7 +91,6 @@ function FormExample() {
                                 value={lastName}
                                 onChange={(e) => setLastname(e.target.value)}
                             />
-
                         </Form.Group>
 
 
@@ -148,6 +144,7 @@ function FormExample() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required />
+                                {!emailCheck && <span>Email is Already in use</span>}
                             <Form.Control.Feedback type="invalid">
                                 {/* Please provide a valid zip. */}
                             </Form.Control.Feedback>
