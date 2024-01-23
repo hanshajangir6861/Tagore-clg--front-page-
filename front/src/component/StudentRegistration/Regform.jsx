@@ -1,4 +1,4 @@
-import { useState ,useContext} from 'react';
+import { useState, useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -12,7 +12,7 @@ import { context } from '../../App';
 
 
 function FormExample() {
-    const {serverLink} = useContext(context)
+    const { serverLink } = useContext(context)
     const navigate = useNavigate()
     const [validated, setValidated] = useState(false);
     const [firstName, setFirstname] = useState('');
@@ -23,15 +23,34 @@ function FormExample() {
     const [phoneNo, setPhoneNo] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [emailCheck , setemailCheck] = useState('')
+    const [error, setError] = useState();
+    const [emailCheck, setemailCheck] = useState('')
+
+
+
+
+
+    const handlePasswordChange = (e) => {
+        const newpassword = e.target.value;
+        setPassword();
+
+        if (newpassword.lenght !== 8) {
+            setError('Password must be 8 characters long');
+        }
+        else {
+            setError('')
+        }
+
+
+    }
 
 
     const StudentRegister = async () => {
-        if(!firstName ||!lastName || !userName || !fathersName ||!phoneNo || !email || !password){
+        if (!firstName || !lastName || !userName || !fathersName || !phoneNo || !email || !password) {
             alert("please fill in all the fields")
             return;
         }
-        else{
+        else {
             let result = await axios.post(`${serverLink}/data/Register`, {
                 Firstname: firstName,
                 Lastname: lastName,
@@ -40,15 +59,15 @@ function FormExample() {
                 Phoneno: phoneNo,
                 Email: email,
                 Password: password
-    
+
             })
             result = result.data
             alert("Successfull Registration")
             navigate("/stdlogin")
         }
-     
+
     }
- 
+
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
@@ -61,7 +80,7 @@ function FormExample() {
 
     return (
         <>
-            <div className='container'>  
+            <div className='container'>
                 <div className="hadding">
                     <h1>COLLEGE REGISTRATION FORM</h1>
                     <h6>Enter your registration information below</h6>
@@ -144,7 +163,7 @@ function FormExample() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required />
-                                {!emailCheck && <span>Email is Already in use</span>}
+                            {!emailCheck && <span></span>}
                             <Form.Control.Feedback type="invalid">
                                 {/* Please provide a valid zip. */}
                             </Form.Control.Feedback>
@@ -154,8 +173,12 @@ function FormExample() {
                             <Form.Label>password</Form.Label>
                             <Form.Control type="text" placeholder="Enter your Password"
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                onChange={handlePasswordChange}
+
+                                // onChange={(e) => setPassword(e.target.value)}
                                 required />
+                            {error && <p style={{ color: 'red' }}>{error}</p>}
+
                             <Form.Control.Feedback type="invalid">
                                 {/* Please provide a valid zip. */}
                             </Form.Control.Feedback>
@@ -173,10 +196,10 @@ function FormExample() {
               />
             </Form.Group>
             <Button type="submit">Submit form</Button> */}
-        
 
 
-            <Form.Group className="mb-3">
+
+                    <Form.Group className="mb-3">
                         <Form.Check
                             required
                             label="Agree to terms and conditions"

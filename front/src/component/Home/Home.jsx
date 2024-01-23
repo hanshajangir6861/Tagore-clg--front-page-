@@ -24,15 +24,17 @@ import 'aos/dist/aos.css';
 
 
 function Home() {
-  const [validated, setValidated] = useState(false);
+  const [validated, setValidated] = useState(true);
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 2000,
+      once: true, });
+    
 
   })
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
+    if (form.checkValidity() === true) {
       event.preventDefault();
       event.stopPropagation();
     }

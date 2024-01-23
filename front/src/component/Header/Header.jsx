@@ -8,13 +8,18 @@ import { useState, useEffect, useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 import EmailIcon from '@mui/icons-material/Email';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
-import { Link } from 'react-router-dom';
+import { Link, useLocation,useNavigate } from 'react-router-dom';
+
 import { context } from '../../App';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 
 
 function Header() {
   const { serverLink } = useContext(context)
+  
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const adminId = location.pathname.split("/")[2]
   const [adminName, setadminName] = useState('')
@@ -52,6 +57,11 @@ function Header() {
     setstudentName(result)
   }
 
+  const handleGoBack = () => {
+    navigate(-1);
+
+  };
+
   return (
     <>
       {
@@ -60,6 +70,8 @@ function Header() {
             <div className='second-navbar'>
               <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
+                
+                
 
                   <div className="name">
                     <div className="hin">
@@ -168,6 +180,11 @@ function Header() {
             <div className="wapper sticky-navbar">
               <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
+
+                <div className="back-arrow" onClick={handleGoBack}>
+                <ArrowBackIosIcon  color='orange'/>
+                </div>
+
                   <Navbar.Brand href="#home"><img src={Logo} alt="" /></Navbar.Brand>
                   <div className="name">
                     <div className="hin">

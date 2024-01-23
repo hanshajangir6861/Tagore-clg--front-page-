@@ -17,9 +17,18 @@ function FormExample() {
     const navigate = useNavigate()
     const [validated, setValidated] = useState(false);
     const [username, setUsername] = useState()
-    const [password, setPassword] = useState()
+    const [password, setPassword] = useState('')
     const [visible , setVisible] = useState(false)
     const [agreeTerms, setAgreeTerms] = useState(false);
+
+
+
+
+
+
+
+
+
 
     const StudentLogin = async () => {
         let result = await axios.post(`${serverLink}/data/login`, {
@@ -94,12 +103,14 @@ function FormExample() {
                                 <Form.Control type={visible ? "text" : "password"}
                                  placeholder="Enter your Password" 
                                 value={password}
+
                                 onChange={(e)=> setPassword(e.target.value)}
-                               
+
                                 required />
                                  <div className="eyeicon" onClick={()=>{setVisible(!visible)}}>
                                 {visible ? <EyeOutlined/>:<EyeInvisibleOutlined/> }
                               </div>
+
                                 <Form.Control.Feedback type="invalid">
 
                                 </Form.Control.Feedback>

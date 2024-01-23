@@ -7,16 +7,21 @@ import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cap from '../Image/cap.png'
 import '../EmployeeLogin/Employeelogin.css'
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { context } from '../../App';
 import {EyeInvisibleOutlined , EyeOutlined} from "@ant-design/icons"
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
+
 
 
 function FormExample() {
     const { serverLink, setAdminLoggedIn } = useContext(context);
     // const serverLink = useContext(context)
+    // const History = useHistory();
     const navigate = useNavigate();
     const [validated, setValidated] = useState(false);
     const [userName, setUsername] = useState()
@@ -76,6 +81,9 @@ const [agreeTerms, setAgreeTerms] = useState(false);
             <div className='main'>
                 <div className="container">
                     <div className="Adminreg">
+                    {/* <div className="back-arrow" onClick={() => History.goBack()}>
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                    </div> */}
                         <h1>EMPLOYEE LOGIN FORM</h1>
                         <h6>Enter your login information below</h6>
                         <button><Link to='/adminreg'>New Registration</Link></button>
